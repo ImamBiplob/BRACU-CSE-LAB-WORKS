@@ -1,2 +1,0 @@
-first compile the java file
-then open the htm file (web page)
