@@ -1,0 +1,8 @@
+class ST implements Teaching,Studying{
+    void Study(){
+        System.out.println("Study method");
+    }
+    void Teach(){
+        System.out.println("Teach method");
+    }
+}

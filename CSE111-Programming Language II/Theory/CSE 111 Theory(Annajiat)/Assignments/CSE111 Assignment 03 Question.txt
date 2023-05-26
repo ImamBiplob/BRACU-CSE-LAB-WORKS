@@ -1,0 +1,77 @@
+1) Design a MyComplex class with gettters/setters and print value (using toString) so that 3 + 5i is printed after executing following statements:
+MyComplex a = new MyComplex();
+a.setRealPart(3);
+a.setImaginaryPart(5);
+out.println(a);
+
+2) Modify Task1 to allow printing negative imaginary part correctly, 3 - 5i (instead of 3 + -5i)
+
+3) Design MyComplex class so that followings are possible:
+MyComplex a = new MyComplex();
+MyComplex b = new MyComplex();
+a.setRealPart(3);
+a.setImaginaryPart(5);
+b.setRealPart(20);
+b.setImaginaryPart(40);
+MyComplex c = a.add(b);
+out.println(c); //should print 23 + 45i
+
+4) Design MyComplex class so that followings are possible:
+MyComplex a = new MyComplex(3, 5);
+out.println(a); //should print 3 + 5i
+
+5) Design MyComplex class so that followings are possible:
+MyComplex a = new MyComplex();
+MyComplex b = new MyComplex(6);
+MyComplex c = new MyComplex(20, 50);
+out.println(a); //should print 0 + 0i
+out.println(b); //should print 6 + 0i
+out.println(c); //should print 20 + 50i
+
+6) Design MyComplex class so that followings are possible:
+MyComplex a = new MyComplex(3, 5);
+MyComplex b = new MyComplex(20, 50);
+MyComplex c = a.add(b);
+out.println(c); //should print 23 + 45i
+
+7) Design MyComplex class so that followings are possible:
+MyComplex a = new MyComplex();
+MyComplex b = new MyComplex(6);
+MyComplex c = new MyComplex(20, 50);
+MyComplex d = new MyComplex(100, 300);
+MyComplex e = a.add(b).add(c).add(d);
+out.println(e); //should print 126 + 350i
+
+8) Design MyComplex class so that followings are possible:
+MyComplex a = new MyComplex(20, 50);
+MyComplex b = new MyComplex(a);
+b.setRealPart(4);
+out.println(b); //should print 4 + 50i
+
+
+From Deitel 10th edition (early objections version). Read chapter 3 
+Page 98 (PDF: 142)
+9) Exercise 3.12, Invoice class
+10) Ex 3.13, Employee class
+11) Ex 3.14
+12) Ex 3.15
+13) Ex 3.16
+14) Ex 3.17
+15) Ex 4.20
+16) Design Student class so that followings are possible:
+Student a = new Student();
+double[] grades = {4.0, 3, 3.7};
+double[] credits = {3, 3, 0};
+String[] courses = {"CSE110","MAT110","ENG091"};
+a.setGrades(grades);
+a.setCredits(credits);
+a.setCourses(courses);
+out.print(a.getGPA()); //should print 3.5 or close
+out.print(a);/*should print followings:
+Course Credit Grade
+CSE110    3    4.0
+MAT110    3    3.0
+ENG091    0    3.7
+==================
+GPA 3.5
+*/
