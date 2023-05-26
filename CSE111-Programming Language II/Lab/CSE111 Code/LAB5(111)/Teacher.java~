@@ -1,0 +1,16 @@
+public class Teacher {
+  String name,department;
+  int c=0;
+  Course a[]= new Course[3];
+  Teacher(String name,String department) {
+    this.name=name;
+    this.department=department;
+  }
+  void addCourse(Course p){
+  a[c]=p;
+  c++;
+  }
+  void printDetail(){
+    
+
+}

@@ -1,0 +1,61 @@
+import java.util.Scanner;
+public class SJFpreemptive {
+  public static void main(String [] args) {
+    
+    Scanner sc = new Scanner(System.in);
+    
+    System.out.println("Please Enter The Number Of Process");
+    int p_num = sc.nextInt();
+    
+    int p_ID[] = new int[p_num];
+    int arivalTime[] = new int[p_num];
+    int burstTime[] = new int[p_num];
+    int ct[] = new int[p_num];
+    int tat[] = new int[p_num];
+    int wt[] = new int[p_num];
+    int flag[] = new int[p_num];
+    int sysTime = 0, totalTime = 0;
+    float avgWT = 0, avgTAT = 0;
+    
+    for(int i=0;i<p_num;i++) {
+      System.out.println("Please enter p"+(i+1)+"'s arrival time");
+      arrivalTime[i] = sc.nextInt();
+      System.out.println("Please enter p"+(i+1)+"'s burstime");
+      burstTime[i] = sc.nextInt();
+      p_ID[i] = i+1;
+      flag[i] = 0;
+    }
+    while(true) {
+      int c= p_num;
+      int min = 999;
+      if(totalTime == p_num) {
+        break;
+      }
+      for(int i=0;i<p_num;i++) {
+        if((arrivalTime[i]<=sysTime) && (flag[i]==0) && (burstTime[i]<min)){
+          min=burstTime[i];
+          c=i;
+        }
+      }
+      if(c==p_num)
+        sysTime++;
+      else{
+        ct[c] = sysTime+burstTime[c];
+        sysTime=sysTime+burstTime[c];
+        tat[c] = ct[c]-arrivalTime[c];
+        wt[c] = tat[c]-burstTime[c];
+        flag[c]=1;
+        totalTime++;
+      }
+    }
+    
+    System.out.println("\nProcess Arrival Burst Complete Turnaround Waiting");
+    for( int i=0;i<p_num;i++) {
+      avgWT=avgWT+wt[i];
+      avgTAT=avgTAT+tat[i];
+      System.out.println("\t"+p_ID[i]+"t "+arrivalTime[i]+"\t\t" burstTime[i]+"\t\t"+ ct[i]+"\t\t\t"+tat[i]+"t\t"+wt[i]);
+    }
+    System.out.println("\nAverage waiting time : " + (avgWT/p_num));
+    System.out.println("Average turnaround time : " + (avgTAT/p_num));
+  }
+}   

@@ -1,0 +1,12 @@
+public class Patient {
+  String name="default name";
+  int age;
+  String bg;
+  int id;
+  public Patient(String name,int age,String bg,int id) {
+    this.name=name;
+    this.age=age;
+    this.bg=bg;
+    this.id=id;
+  }
+}

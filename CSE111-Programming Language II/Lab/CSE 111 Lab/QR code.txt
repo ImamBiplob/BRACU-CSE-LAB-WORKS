@@ -1,0 +1,8 @@
+http://www.moongate.ro/en/products/qr_code-vcard/
+
+First name
+Last name
+Full name
+Title - ID
+Cellphone 
+email Address

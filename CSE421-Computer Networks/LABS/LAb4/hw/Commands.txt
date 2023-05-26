@@ -1,0 +1,5 @@
+R1> 
+enable
+config ter
+int g0/0
+ip helper-address 192.168.60.253

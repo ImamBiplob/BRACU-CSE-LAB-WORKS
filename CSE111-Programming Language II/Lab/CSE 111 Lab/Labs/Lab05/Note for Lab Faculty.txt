@@ -1,0 +1,2 @@
+In the first half of the lab, students will do tracing (Task 1 to 6)
+In the second half of the lab, students will do code reverse engineering (Task 7 to 12)

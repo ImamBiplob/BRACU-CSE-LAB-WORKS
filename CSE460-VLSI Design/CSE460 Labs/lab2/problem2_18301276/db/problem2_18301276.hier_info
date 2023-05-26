@@ -1,0 +1,14 @@
+|problem2_18301276
+Clock => y~0.IN1
+Resetn => y~1.IN1
+w[0] => always0~1.IN0
+w[0] => always0~0.IN0
+w[0] => always0~2.IN0
+w[1] => always0~2.IN1
+w[1] => always0~0.IN1
+w[1] => always0~1.IN1
+q <= Selector0.DB_MAX_OUTPUT_PORT_TYPE
+c[0] <= c~3.DB_MAX_OUTPUT_PORT_TYPE
+c[1] <= Selector5.DB_MAX_OUTPUT_PORT_TYPE
+
+

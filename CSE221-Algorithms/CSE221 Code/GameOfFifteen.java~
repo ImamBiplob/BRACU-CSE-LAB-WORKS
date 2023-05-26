@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class GameOfFifteen {
+  public static void main(String[] args) {
+    int n,p,fnc=0;
+    int m = 15;
+    int k = Math.pow(10,2);
+    Scanner sc = new Scanner(System.in);
+    n = sc.nextInt();
+    int i = 0;
+    while(i!=n) {
+      fnc = m*m;
+      i++;
+    }
+    p = fnc%k;
+    System.out.println(p);
+    sc.close();
+  }
+}

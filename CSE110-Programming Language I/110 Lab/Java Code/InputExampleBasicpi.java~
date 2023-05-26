@@ -1,0 +1,20 @@
+
+import java.util.Scanner;
+public class InputExampleBasicpi
+{  
+    public static void main (String[] args)
+    {   
+        // you can use any other meaningful 
+        // variable name instead of "keyboard"
+        Scanner keyboard; 
+        keyboard = new Scanner ( System.in );
+        // "System.in" is default input device for 
+        // our computer system
+        
+        System.out.println("Please enter an integer number"); //prompt
+      int r;
+        r=keyboard.nextInt();
+      double  pi=3.1416;
+      double  area=pi*r*r;
+        System.out.println(area);
+    }}

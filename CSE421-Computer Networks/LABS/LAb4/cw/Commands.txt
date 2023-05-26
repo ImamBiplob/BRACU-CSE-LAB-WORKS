@@ -1,0 +1,74 @@
+Task 1:
+Ipconfig /all
+Ping 10.10.1.98
+Ping 10.10.1.18
+Tracert 10.10.1.18
+Tracert 10.10.1.98
+Show ip interface brief
+Show ip route
+Config t
+Interface s0/0/0
+Ip address 10.10.1.5 255.255.255.252
+No shutdown
+Exit
+Exit
+Copy run start
+Show ip interface brief
+Ping 10.10.1.18
+Ping 10.10.1.98
+Tracert 10.10.1.18
+
+Task 2:
+From PC-1
+Ping 172.16.1.1
+Ping 209.165.201.2
+Ping 172.16.1.4
+Ping 172.16.2.3
+Ping 172.16.2.4
+
+From PC-2
+Ping 172.16.1.1
+Ping 209.165.201.2
+Ping 172.16.1.3
+Ping 172.16.2.3
+Ping 172.16.2.4
+
+From PC-A
+Ping 209.165.201.2
+Ping 172.16.2.1
+Ping 172.16.2.4
+Ping 172.16.1.3
+Ping 172.16.1.4
+
+SSH -l Admin01 172.16.1.1
+Config t
+Int g0/1
+Ip add 172.16.2.1  255.255.255.0
+No shutdown
+Exit
+Exit
+Copy run start
+Show ip interface brief
+Ping 172.16.2.3
+
+Task 3:
+En
+Ip dhcp excluded-address 192.168.10.1 192.168.10.10
+Ip dhcp excluded-address 192.168.30.1 192.168.30.10
+
+Ip dhcp pool R1-LAN
+Network 192.168.10.0 255.255.255.0
+Default-router 192.168.10.1
+Dns-server 192.168.20.254
+Exit
+
+Ip dhcp pool R3-LAN
+Network 192.168.30.0 255.255.255.0
+Default-router 192.168.30.1
+Dns-server 192.168.20.254
+
+Int g0/0
+Ip helper-address 10.1.1.2
+
+Int g0/0
+Ip helper-address 10.2.2.2

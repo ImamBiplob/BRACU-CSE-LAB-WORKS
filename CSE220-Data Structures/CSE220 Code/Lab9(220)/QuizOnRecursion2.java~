@@ -1,0 +1,14 @@
+public class QuizOnRecursion2 {
+  public static void main(String[] args) {
+    int a=4210;
+    printChar(a);
+  }
+   public static void printChar(int a) {
+      if(a==0) return;
+     else {
+        System.out.println(a/100);
+        a=a%100;
+        printChar(a);
+     }
+   }
+}

@@ -1,0 +1,7 @@
+#DrJava configuration file
+#Thu Sep 19 21:58:40 BDT 2019
+font.main = Monospaced-16
+key.delete.next = [shift DELETE]
+key.delete.previous = [shift BACK_SPACE]
+last.dir = C:\\Users\\imamb
+last.interactions.dir = C:\\Users\\imamb

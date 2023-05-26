@@ -1,0 +1,126 @@
+1)
+
+#!/bin/bash
+
+echo "Enter your annual income"
+read income
+
+if [ $income -le 240000 ];
+then   
+   echo "0"
+elif [ $income -le 540000 ];
+then
+   tax=$(( $income - 240000 ))
+   echo "$(("$tax" * 10/100))"
+   
+elif [ $income -le 720000 ];
+then
+   in1=$(( $income - 240000 ))
+   in2=$(( $in1 - 300000 ))
+   tax1=$(( 300000 * 10/100 ))
+   tax2=$(( $in2 * 20/100 ))
+   totaltax=$(( $tax1+$tax2 ))
+   echo "$totaltax"   
+   
+else
+   in1=$(( $income - 240000 ))
+   in2=$(( $in1 - 300000 ))
+   in3=$(( $in2 - 180000 ))
+   tax1=$(( 300000 * 10/100 ))
+   tax2=$(( 180000 * 20/100 ))
+   tax3=$(( $in3 * 30/100 ))
+   totaltax=$(( $tax1+$tax2+$tax3 ))
+   echo $totaltax 
+fi
+
+2)
+
+#!/bin/bash
+echo "Enter a number"
+read num
+if(( $num%2==0 && $num%5==0 ));
+  then echo "no"
+elif(( $num%2==0 || $num%5==0 ));
+  then echo "yes"
+else 
+  echo "Ignore"
+fi
+
+3)
+
+#!/bin/bash
+
+echo "Enter a number"
+read num
+c=0
+for((i=2; i<=num; i++))
+do
+  if [ $((num%i)) -eq 0 ];
+  then c=$(($c + 1))
+  fi
+done
+if [ $c -eq 1 ];
+then echo "prime"
+else
+echo "Not Prime"
+fi
+
+4)
+
+#!/bin/bash
+
+echo "Which operation would you like to do?"
+read operator
+echo "Enter operand 1"
+read op1
+echo "Enter operand 2"
+read op2
+res=0
+if [ $operator = + ];
+then res=$(($op1 + $op2))
+echo $res
+elif [ $operator = - ];
+then res=$(($op1-$op2))
+echo $res
+elif [ $operator = * ];
+then res=$(($op1 * $op2))
+echo $res
+elif [ $operator = / ];
+then res=$(($op1 / $op2))
+echo $res
+else
+echo "Wrong Input"
+fi
+
+5)
+
+#!/bin/bash
+
+echo "Enter a number"
+read n
+sum=0
+length=${#n}
+
+for ((i=0; i<$length; i++ ))
+do
+ sqr=$((${n:$i:1} ** 2))
+ sum=$(( $sum + $sqr ))
+done
+
+n=$sum
+length=${#sum}
+sum=0
+
+for ((i=0; i<$length;i++ ))
+do
+ sqr=$((${n:$i:1} ** 2))
+ sum=$(( $sum + $sqr ))
+done
+
+if [ $sum = 1 ];
+then echo "Happy Number"
+elif [ $sum = 4 ];
+then echo "Unhappy Number"
+else
+echo "Neither happy nor unhappy! What is this??"
+fi

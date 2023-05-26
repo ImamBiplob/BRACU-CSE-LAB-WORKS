@@ -1,0 +1,7 @@
+public class Cat extends Animal{
+  Cat(){
+  }
+  Cat(String sound){
+    super(sound);
+  }
+}

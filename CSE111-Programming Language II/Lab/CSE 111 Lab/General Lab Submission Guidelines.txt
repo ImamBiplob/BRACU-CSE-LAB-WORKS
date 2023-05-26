@@ -1,0 +1,7 @@
+It is mandatory for students of Annajiat's lab. Other students, do what your lab teachers asks.
+
+    Please follow java code convention, specially naming convention, and indentation (spacing)
+    Do not use unnecessary brackets
+    Follow the while loop style mailed in the group
+    Use the nexample of submission from \\TSR\CSE\Annajiat\CSE111\Labs\Lab01 Example
+

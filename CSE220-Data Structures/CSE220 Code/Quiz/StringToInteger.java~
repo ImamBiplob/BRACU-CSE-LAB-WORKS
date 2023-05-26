@@ -1,0 +1,12 @@
+public class StringToInteger {
+  public static void main(string[] args) {
+    String s="123456789";
+    int n=0;i=0;
+    System.out.println(convert(s,n,i));
+  }
+  public static int convert(String s,int n,int i) {
+    if(i==s.length) return n;
+    n=n*10+s.charAt(i);
+    return (s,n,i+1);
+  }
+}

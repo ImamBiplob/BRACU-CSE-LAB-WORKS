@@ -1,0 +1,50 @@
+How to print with indentation?
+Use COURIER NEW FONT, BOLD
+
+
+What is the difference between print and println?
+See Task 5 of \\tsr\Spring\CSE\Annajiat\CSE 110 lab and CSE 162\Labs\Lab04\Lab v8.doc
+
+
+How to print "an Enter"?
+There are several ways.
+println()
+print('\n');
+print("\n");
+printf("\n");
+
+
+How name variables and constants?
+See \\tsr\Spring\CSE\Annajiat\CSE 110 lab and CSE 162\Labs\Lab03\Recommended Reading V2.doc
+
+
+For anything that
+
+You code should always be indented while typing. Do not wait till end of your typing.
+In the code below, observe that whenever a curly bracket, { starts, following lines start after a small gap.
+Whenver curly bracket } is closed, following lines do not have that gap.
+This helps to quickly understand which lines are inside a loop / condition / method and which lines are outside.
+
+public class Q1
+{  
+  public static void main(String args[])
+  {
+    int x = 0, y =0;
+    int sum = 0;
+    while (x < 10){
+      y = x - 3;
+      y = 40;
+      while (y > 22){
+        if ((sum > 30) && (sum < 40)) 
+          sum = sum + x * 2 ;
+        else if ((sum > 40) && (sum < 50)) 
+          sum = sum + x * 3; 
+        else 
+          sum = sum + 23;
+        System.out.println(sum);
+        y = y - 10;
+      }
+      x += 2;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+Students need to learn the use of copy con <file_name.java> to create a .java file from the command prompt, 
+and then compile and run the file from command prompt. Note that the %PATH% variable may need to be modified, 
+i.e. the path of the bin folder under the JDK root folder needs to be added to the environment variable so 
+that javac and java are accessible from the command prompt. Note that "echo %PATH%" can be used to see the 
+current value of the PATH variable and "set PATH=%PATH%<path of jdk\bin>;" can be used to append the path 
+of JDK\bin to the PATH variable. 
+"javac <filename>.java" can be used to compile the file from the command prompt. 
+"java <className>" can be used to execute the compiled class file from the command prompt. 
+
+

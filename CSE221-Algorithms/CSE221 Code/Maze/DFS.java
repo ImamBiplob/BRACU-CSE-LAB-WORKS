@@ -1,0 +1,134 @@
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.io.BufferedReader;
+import java.io.*;
+import java.util.Stack;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.StringTokenizer;
+
+/**
+ *
+ * @author 18301276
+ */
+public class DFS {
+    int g[][];
+    int parent[];
+    int color[];
+    int distance[];
+    int time;
+    Stack d; 
+    Stack p; 
+    LinkedList tpsort = new LinkedList<Integer>();
+    LinkedList ftime = new LinkedList<Integer>();
+    public DFS(int arr[][]) {
+        g = arr;
+        parent = new int[g.length];
+        color = new int[g.length];
+        distance = new int[g.length];
+        time=0;
+        d = new Stack<Integer>();
+        p = new Stack<Integer>();
+        for(int i=0;i<g.length;i++) {
+            parent[i] = -1;
+            color [i] = -1;
+        }
+        
+        
+    }
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application log
+        int [][] graph=null;
+    BufferedReader obj= null;
+    try {
+      String str;
+      FileReader fr = new FileReader("maze.txt");
+      obj = new BufferedReader(fr);
+      str = obj.readLine();
+      // convert this to int
+      int v = Integer.parseInt(str);
+      System.out.println(v);
+      
+        // create the matrix
+        graph = new int[v][v];
+      
+     
+      while ((str = obj.readLine()) != null) {
+        // tokenize = a,b
+        StringTokenizer st = new StringTokenizer(str," ");
+        int token1 = Integer.parseInt(st.nextToken());
+        
+        String token2 = st.nextToken();
+        
+        graph[token1][Integer.parseInt(token2)]=1;
+       
+      }
+      
+      
+      
+      
+    } catch (IOException e) {
+      
+      e.printStackTrace();
+      
+    }
+    System.out.println("Adjacency Matrix of this graph is: ");
+    for (int i= 0;i<graph.length;i++){
+      
+      for(int j = 0;j < graph.length;j++){
+        
+        System.out.print(graph[i][j]);
+      }
+      System.out.println();
+    }
+    int c=0;
+    DFS a = new DFS(graph);
+    for(int i=0;i<a.g.length;i++) {
+      if(i==9) return;
+            if(a.color[i]==-1) {
+              c++;
+                a.DFSvisit(i);
+            }
+        }
+    System.out.println("\nDiscovred Nodes: "+a.d);
+    System.out.println("\nProcessed Nodes: "+a.p);
+    System.out.println("\nDiscover time array of graph is "+Arrays.toString(a.distance));
+    System.out.println("\nParent Array of graph is "+Arrays.toString(a.parent));
+    System.out.println("\nAfter topological sort :"+ a.tpsort);
+    System.out.println("\nFinish Times           :"+ a.ftime);
+    System.out.println("\nConeected components of this graph are "+ c);
+    
+    }
+    
+    public void DFSvisit(int u) {
+      if(u==9) return;
+        color[u] = 0;
+        time++;
+        distance[u]=time;
+        d.push(u);
+        //p.push(u);
+        for(int i=0;i<g.length;i++) {
+            if(g[u][i]==1) {
+                if(color[i]==-1) {
+                    parent[i]=u;
+                    DFSvisit(i);
+                }
+            }
+        }
+        p.push(u);
+        color[u]=1;
+        time++;
+        tpsort.addFirst(u);
+        ftime.addFirst(time);
+        //System.out.println("finished time of "+p.pop()+" is "+time);
+        
+       
+        return;
+        
+    }
+    
+}

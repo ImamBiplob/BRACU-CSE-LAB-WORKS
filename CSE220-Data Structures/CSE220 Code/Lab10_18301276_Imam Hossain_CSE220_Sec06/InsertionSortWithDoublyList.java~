@@ -1,0 +1,17 @@
+public class InsertionSortWithDoublyList {
+  public class static void main(String[] args) {
+    int a[]={6,5,3,1,2};
+    int i=1;
+    Node head=new Node(a[0],null,null);
+    Node x=head;
+    for(int k=1;k<=i;k++) {
+      x.next=new Node(a[k],null,x);
+      x=x.next;
+    }
+    ISList(head,i);
+    for(x=head;x!=null;x=x.next) {
+      System.out.println(x.elem);
+    }
+  }
+  //public static void ISList(Node n,int i) {
+}

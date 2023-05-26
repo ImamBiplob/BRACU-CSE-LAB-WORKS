@@ -1,0 +1,4 @@
+class MScStudent extends Student {//inheritance
+    String degree = "M.Sc.";
+    Strsing prevDegree = "LLB";
+}

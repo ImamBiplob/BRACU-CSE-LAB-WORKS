@@ -1,0 +1,9 @@
+import java.util.*;
+
+public class Task7h {
+  public static void main(String[] args) { 
+    Scanner sc = new Scanner(System.in);
+    String a = "helllllllo";
+    System.out.println(a.lastIndexOf('l'));//returns the index of o
+  }
+}

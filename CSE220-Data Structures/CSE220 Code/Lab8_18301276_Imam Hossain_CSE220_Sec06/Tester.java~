@@ -1,0 +1,49 @@
+import java.util.Scanner;
+public class Tester {
+  public static void main(String [] args) {
+    String options="Choose Your Option from Below\nOptions are : \n 1. Add Patient\n 2. Serve Patient\n 3. Cancel All Patient\n 4. Can Doctor Go Home\n 5. Show2All Appointments\n 6. To Exit\n";
+    System.out.println(options);
+    Scanner sc=new Scanner(System.in);
+    int n=0;
+    WRM w1=new WRM();
+    try{
+    while(n!=6){
+      n=sc.nextInt();
+      if(n==1){
+        w1.RegisterPatient();
+        System.out.println("Enter Any Option");
+      }
+      else if(n==2){
+        w1.ServePatient();
+        System.out.println("Enter Any Option");
+      }
+      else if(n==3){
+        w1.CancelAll();
+        System.out.println("Enter Any Option");
+      }
+      else if(n==4){
+        boolean flag=w1.CanDoctorGoHome();
+        if(flag)
+          System.out.println("Doctor can Go Home");
+        else
+          System.out.println("Doctor can't Go Home");
+        System.out.println("Enter Any Option");
+      }
+      else if(n==5){
+        w1.ShowAllPatient();
+        System.out.println("Enter Any Option");
+      }
+      else if(n==6)
+        System.out.println("Program Exited\nThank You :)");
+      else
+        System.out.println("Type 1 to 6");
+    }
+    }
+    catch(Exception e){
+      System.err.println("Run the Program Again and Type 1 to 6");
+      sc.next();
+    }
+    sc.close();
+  }
+}
+    

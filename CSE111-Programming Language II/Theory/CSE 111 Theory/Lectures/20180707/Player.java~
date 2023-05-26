@@ -1,0 +1,6 @@
+public class Player{
+    private String name = "Default";
+    private int number = 0;  
+    private String team = "Default"; 
+    //your code here 
+}

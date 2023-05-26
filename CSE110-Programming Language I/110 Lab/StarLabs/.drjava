@@ -1,0 +1,12 @@
+#DrJava configuration file
+#Fri Feb 01 23:50:31 BDT 2019
+key.delete.next = [shift DELETE]
+key.delete.previous = [shift BACK_SPACE]
+window.height = 876
+window.width = 1616
+window.x = -8
+window.y = -8
+window.state = 6
+last.dir = C:\\Users\\Imam Hossain Biplob
+last.interactions.dir = C:\\Users\\Imam Hossain Biplob
+tabbedpanes.state = 800 450 700 400

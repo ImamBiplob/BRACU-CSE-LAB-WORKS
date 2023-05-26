@@ -1,0 +1,8 @@
+Create a huffman tree using th following alphabets and their corresponding frequencies:
+
+p : 12
+h: 9
+d: 15
+k : 6
+t: 23
+q: 17

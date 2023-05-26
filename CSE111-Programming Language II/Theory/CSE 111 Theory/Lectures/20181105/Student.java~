@@ -1,0 +1,6 @@
+class Student {
+    int studentCount;
+    Student() {
+        ++studentCount;
+    }
+}

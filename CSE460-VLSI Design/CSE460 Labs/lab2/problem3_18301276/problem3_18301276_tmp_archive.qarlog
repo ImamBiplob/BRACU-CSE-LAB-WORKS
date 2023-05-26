@@ -1,0 +1,39 @@
+Quartus II Archive log --	C:/Users/Imam Biplob/Desktop/460/lab2/problem3_18301276/problem3_18301276_tmp_archive.qarlog
+
+Archive:	C:/Users/Imam Biplob/Desktop/460/lab2/problem3_18301276/problem3_18301276_tmp_archive.qar
+Date:		Mon Jan 10 19:15:24 2022
+Quartus II		8.1 Build 163 10/28/2008 SJ Web Edition
+
+	=========== Files Selected: ===========
+C:/Users/Imam Biplob/Desktop/460/lab2/problem3_18301276/db/problem3_18301276.cbx.xml
+C:/Users/Imam Biplob/Desktop/460/lab2/problem3_18301276/db/problem3_18301276.sim.cvwf
+C:/Users/Imam Biplob/Desktop/460/lab2/problem3_18301276/problem3_18301276.asm.rpt
+C:/Users/Imam Biplob/Desktop/460/lab2/problem3_18301276/problem3_18301276.eda.rpt
+C:/Users/Imam Biplob/Desktop/460/lab2/problem3_18301276/problem3_18301276.fit.rpt
+C:/Users/Imam Biplob/Desktop/460/lab2/problem3_18301276/problem3_18301276.fit.summary
+C:/Users/Imam Biplob/Desktop/460/lab2/problem3_18301276/problem3_18301276.flow.rpt
+C:/Users/Imam Biplob/Desktop/460/lab2/problem3_18301276/problem3_18301276.map.rpt
+C:/Users/Imam Biplob/Desktop/460/lab2/problem3_18301276/problem3_18301276.map.smsg
+C:/Users/Imam Biplob/Desktop/460/lab2/problem3_18301276/problem3_18301276.map.summary
+C:/Users/Imam Biplob/Desktop/460/lab2/problem3_18301276/problem3_18301276.pin
+C:/Users/Imam Biplob/Desktop/460/lab2/problem3_18301276/problem3_18301276.pof
+C:/Users/Imam Biplob/Desktop/460/lab2/problem3_18301276/problem3_18301276.qpf
+C:/Users/Imam Biplob/Desktop/460/lab2/problem3_18301276/problem3_18301276.qsf
+C:/Users/Imam Biplob/Desktop/460/lab2/problem3_18301276/problem3_18301276.sim.rpt
+C:/Users/Imam Biplob/Desktop/460/lab2/problem3_18301276/problem3_18301276.sof
+C:/Users/Imam Biplob/Desktop/460/lab2/problem3_18301276/problem3_18301276.tan.rpt
+C:/Users/Imam Biplob/Desktop/460/lab2/problem3_18301276/problem3_18301276.tan.summary
+C:/Users/Imam Biplob/Desktop/460/lab2/problem3_18301276/problem3_18301276.v
+C:/Users/Imam Biplob/Desktop/460/lab2/problem3_18301276/problem3_18301276.vwf
+C:/Users/Imam Biplob/Desktop/460/lab2/problem3_18301276/problem3_18301276_description.txt
+c:/altera/81/quartus/bin/assignment_defaults.qdf
+	======= Total: 22 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Mon Jan 10 19:15:24 2022
+Source archive file:	C:/Users/Imam Biplob/Desktop/460/lab2/problem3_18301276/problem3_18301276_tmp_archive.qar
+Archive was extracted into	C:/Users/Imam Biplob/Desktop/460/lab2/problem3_17301153/
+		 - successfully.

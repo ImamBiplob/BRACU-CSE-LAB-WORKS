@@ -1,0 +1,20 @@
+public class quiz2 {
+  public static void main(String[] args) {
+    int a[]={2,3,4,5};int i=0;
+    int max=a[0];
+    System.out.println(maximum(a,i,max));
+  }
+  public static int  maximum(int a[],int i,int m) {
+    
+    if(i==a.length-2)return m;
+    
+      if(a[i+1]>a[i]){
+        m=a[i+1];
+      }
+      i++;
+      maximum(a,i,m);
+      return m;
+    
+  }
+}
+    

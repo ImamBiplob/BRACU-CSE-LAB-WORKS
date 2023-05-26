@@ -1,0 +1,32 @@
+//Object 
+
+public class CricketBangladesh{
+  
+  String score="100";
+  
+  //method signature must match
+  
+  public String toString(){
+    
+    return score;
+    
+  }
+  
+  
+} 
+
+===================================================
+
+public class Tester{
+    public static void main(String [] args){
+        
+        CricketBangladesh tamim=new CricketBangladesh();
+        CricketBangladesh sakib=new CricketBangladesh();
+        
+        //When we are trying to print any object reference internally toString method will be called; 
+        
+        System.out.println(tamim);
+        System.out.println(sakib);
+        
+    }
+}

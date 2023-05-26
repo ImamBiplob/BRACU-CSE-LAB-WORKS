@@ -1,0 +1,33 @@
+1. Introduction:
+----------------
+Software engineering roles
+Understanding the Software Myths (see "1.2. Software Engineering Myths")
+	Mongolian Horde concept
+5 aspects of a good software
+
+2. SDLC, Waterfall Models:
+--------------------------
+Components of SDLC
+Waterfall model → steps, pros and cons, when to use
+
+3. V, Incremental, Iterative Models:
+------------------------------------
+V-model → steps, pros and cons, when to use
+Verification & Validation
+Sequential vs Evolutionary process models
+Incremental model → pros and cons, when to use
+Iterative model → pros and cons, when to use
+Incremental vs Iterative model
+
+4. Agile method:
+----------------
+Agile Manifesto, Advantages of agile method
+Extreme programming → Workflow; Principles or practice (need to understand each principle)
+Agile Unified Process (AUP) → Phases, Disciplines
+	What are project artifacts?
+Scrum → Roles, Ceremonies, Artifacts (need to understand each role, ceremony and artifact)
+	Steps in the Agile-Scrum Framework
+	
+	
+
+

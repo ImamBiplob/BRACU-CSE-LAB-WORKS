@@ -1,0 +1,13 @@
+public class tester {
+  public static void main(String[] args) {
+    Student john=new Student();
+    john.setName("John");
+    System.out.println(john.getName());
+    john.setID("18301272");
+    System.out.println(john.getID());
+    john.setAddress("Gulshan");
+    System.out.println(john.getAddress());
+    john.setCGPA("3.50");
+    System.out.println(john.getCGPA());
+  }
+}

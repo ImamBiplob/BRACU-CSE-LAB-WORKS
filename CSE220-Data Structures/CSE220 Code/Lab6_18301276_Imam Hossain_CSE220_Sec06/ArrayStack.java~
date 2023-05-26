@@ -1,0 +1,60 @@
+public class ArrayStack implements Stack{
+    int size;
+    Object [] data;
+    
+    public ArrayStack(){
+        size=0;
+        data = new Object[5];
+    }
+    public int size() {
+      return size;
+    }
+// Returns true if the stack is empty
+    public boolean isEmpty(){
+      if(size==0)
+        return true;
+      else
+        return false;
+    }
+    public void push(Object e) throws StackOverflowException{
+      data[size]=e;
+      size++;
+    }
+    public Object pop() throws StackUnderflowException {
+      Object p=data[size];
+      data[size]=null;
+      size--;
+      return p;
+    }
+    public Object peek() throws StackUnderflowException {
+      return data[size];
+    }
+    public String toString() {
+      if(size==0)
+        return "empty string";
+      String s="";
+      for(int i=5;i>=0;i--) {
+        s+=data[i];
+      }
+      return s;
+    }
+    public Object[] toArray() {
+      Object a[]=new Object[data.length];
+      int c=0;
+      for(int i=a.length-1;i>=0;i--) {
+        a[c]=data[i];
+        c++;
+      }
+      return a;
+    }
+    public int search(Object e) {
+      int c=-1;
+      for(int i=data.length-1;i>=0;i--) {
+        c++;
+        if(data[i]==e) {
+          return c;
+        }
+      }
+      return c;
+    }
+}

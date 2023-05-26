@@ -1,0 +1,72 @@
+import java.io.*;
+import java.util.*;
+import java.util.LinkedList;
+public class CreateGraph {
+  
+  public static void main(String[] args) {
+    int [][] graph=null;
+    BufferedReader obj= null;
+    try {
+      String str;
+      FileReader fr = new FileReader("input.txt");
+      obj = new BufferedReader(fr);
+      str = obj.readLine();
+      // convert this to int
+      int v = Integer.parseInt(str);
+      System.out.println(v);
+      
+      // create the matrix 
+      graph=new int[v][v];
+      
+      LinkedList [] al = new LinkedList[v];   //LinkedList Array
+      
+      for (int i= 0;i<al.length;i++){
+        al[i] = new LinkedList<String>();     //Declaring LinkedList For Each Vertex
+      }
+      
+      while ((str = obj.readLine()) != null) {
+        // tokenize = a,b
+        StringTokenizer st = new StringTokenizer(str," ");
+        int token1 = Integer.parseInt(st.nextToken());
+        
+        String token2 = st.nextToken();
+        
+        graph[token1][Integer.parseInt(token2)]=1;
+        //graph[Integer.parseInt(token2)][token1]=1;  //FOR BIDIRECTED GRAPH
+        
+        al[token1].add(token2);
+        //al[Integer.parseInt(token2)].add(Integer.toString(token1));   //FOR BIDIRECTED GRAPH
+        
+        //connect graph [a][b] = 1 graph[b][a] = 1
+        
+      }
+      
+      
+      
+      for(int i=0;i<al.length;i++){
+        System.out.print("Adjacent List of "+i+" vertex is: ");
+        for(int j=0;j<al[i].size();j++){
+          System.out.print(al[i].get(j)+" ");
+        }
+        System.out.println();
+      } 
+      
+    } catch (IOException e) {
+      
+      e.printStackTrace();
+      
+    }
+    System.out.println("Adjacent Matrix of this graph is: ");
+    for (int i= 0;i<graph.length;i++){
+      
+      for(int j = 0;j < graph[0].length;j++){
+        
+        System.out.print(graph[i][j]);
+      }
+      System.out.println();
+    }
+    
+  }
+  
+  
+}

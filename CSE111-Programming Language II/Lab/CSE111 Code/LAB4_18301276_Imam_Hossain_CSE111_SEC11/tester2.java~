@@ -1,0 +1,5 @@
+public class tester2 {
+  public static void main(String[] args){
+    BankAccount acc1=new BankAccount();
+  }
+}

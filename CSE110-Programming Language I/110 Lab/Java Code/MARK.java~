@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class MARK{
+  public static void main (String[] args){
+    System.out.println("Enter your no. of quiz");
+    Scanner k=new Scanner(System.in);
+    int n=k.nextInt();
+    int quiz=0,quiza,tm;
+    int c=1;
+    if(n>=1) {
+      while(c<=n) {
+        System.out.println("enter your quiz marks");
+        int q=k.nextInt();
+        quiz=quiz+q;
+        c++;}
+      quiza=quiz/n;
+      System.out.println("Enter your mid mark");
+      int mid=k.nextInt();
+      System.out.println("Enter your final exam mark");
+      int finalxm=k.nextInt();
+      tm=quiza+mid+finalxm;
+      System.out.println("total marki is="+ tm);
+    }
+    else
+      System.out.println("Invalid input");
+  }
+}

@@ -1,0 +1,5 @@
+public class Robot {
+    void a() {
+        System.println("hi");
+    }
+}

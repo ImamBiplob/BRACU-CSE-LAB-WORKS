@@ -1,0 +1,14 @@
+/**
+ * Auto Generated Java Class.
+ */
+public class StudentTester {
+    
+    
+    public static void main(String[] args) { 
+        Student a = new Student();
+        a.howMany();
+    }
+    
+    /* ADD YOUR CODE HERE */
+    
+}

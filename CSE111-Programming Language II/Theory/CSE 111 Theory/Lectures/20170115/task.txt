@@ -1,0 +1,6 @@
+practice
+array related tracing
+given tracing
+read array from how to solve it by computer and deitel
+
+classes and objects

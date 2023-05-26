@@ -1,0 +1,10 @@
+public class Quiz {
+public static void main (String[] args){
+Dog odie = new Dog(&quot;Red&quot;);
+Dog goofy = new Dog(&quot;Blue&quot;);
+odie.bark();
+goofy.bark();
+odie.changeColor(&quot;Brown&quot;);
+odie.bark();
+}
+}

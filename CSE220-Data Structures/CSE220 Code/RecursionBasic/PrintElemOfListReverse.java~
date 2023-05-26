@@ -1,0 +1,13 @@
+import java.util.Scanner;
+public class PrintElemOfListReverse {
+  public static void main (String[] args) {
+    Scanner sc=new Scanner(System.in);
+    Node head=new Node(null,null);
+    Node x=head;
+    for(int i=0;i<5;i++) {
+      x.elem=sc.nextInt();
+      x=x.next;
+      x.next=null;
+    }
+  }
+}

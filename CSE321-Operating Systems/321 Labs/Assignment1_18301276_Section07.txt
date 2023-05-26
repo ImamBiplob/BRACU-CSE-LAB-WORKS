@@ -1,0 +1,20 @@
+1. i.   cat > excalibur.txt
+
+   ii.  chmod 751 excalibur.txt
+
+   iii. mkdir mydirectory
+
+   iv.  cp excalibur.txt mydirectory
+
+   v.   rm excalibur.txt
+
+2. rm -r mydirectory
+
+3. ls *.txt
+
+4. grep "321" *
+
+5. cat -n os.txt
+   sed -n 12,18p os.txt
+
+6. ls

@@ -1,0 +1,12 @@
+public class Student {
+  private String name,id,address;
+  private double cgpa;
+  public String getName();
+  public void setName(String n);
+  public String getID();
+  public void setID(String i);
+  public String getAddress();
+  public void setAddress(String a);
+  Public double getCGPA();
+  public void setCGPA(double c);
+}

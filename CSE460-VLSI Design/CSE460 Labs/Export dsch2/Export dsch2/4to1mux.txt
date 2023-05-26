@@ -1,0 +1,28 @@
+// DSCH 2.7a
+// 12/12/2021 10:03:24 PM
+// C:\Users\Imam Biplob\Downloads\Export dsch2\Export dsch2\4to1mux.sch
+
+module 4to1mux( in4,in1,in2,in3,S0,S1,out1);
+ input in4,in1,in2,in3,S0,S1;
+ output out1;
+ mux #(10) mux(w4,in1,in2,S0);
+ mux #(10) mux(out1,w4,w5,S1);
+ mux #(10) mux(w5,in3,in4,S0);
+endmodule
+
+// Simulation parameters in Verilog Format
+always
+#1000 in4=~in4;
+#2000 in1=~in1;
+#4000 in2=~in2;
+#8000 in3=~in3;
+#16000 S0=~S0;
+#32000 S1=~S1;
+
+// Simulation parameters
+// in4 CLK 10 10
+// in1 CLK 20 20
+// in2 CLK 40 40
+// in3 CLK 80 80
+// S0 CLK 160 160
+// S1 CLK 320 320

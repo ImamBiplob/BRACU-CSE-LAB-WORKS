@@ -1,0 +1,20 @@
+public class MathCompany{
+  public void doMath(int x) throws MyException{
+    System.out.println("Before bad code");
+    int [] a = {1};
+    Student s = null;
+    try{      
+      a[200] = 200;
+      int y = 10 / x;
+    }catch(ArithmeticException e){
+      System.out.println("doMath: I have caught the ArithmeticException");
+    }catch(ArrayIndexOutOfBoundsException e){
+      System.out.println("doMath: I have caught the ArrayIndexOutOfBoundsException");
+      MyException m = new MyException();
+      throw m;
+    }catch(Exception e){
+      System.out.println("doMath: I have caught I have no clue");
+    }
+    System.out.println("After bad code");
+  }
+}

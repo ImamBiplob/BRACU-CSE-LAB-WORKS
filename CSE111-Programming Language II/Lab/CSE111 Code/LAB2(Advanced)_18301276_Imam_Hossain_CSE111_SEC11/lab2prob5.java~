@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class lab2prob5 {
+  public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    System.out.println("enter the value of voltage");
+    int e=sc.nextInt();
+    System.out.println("enter the value of resistance");
+    int r=sc.nextInt();
+    System.out.println("enter the value of inductance");
+    int l=sc.nextInt();
+    System.out.println("enter the value of capacitance");
+    int c=sc.nextInt();
+    System.out.println("enter the value of frequency");
+    int f=sc.nextInt();
+    int I=0;
+    I=e/Math.sqrt(r*r+(2*Math.PI*f*l-1/(2*Math.PI*f*c))*(2*Math.PI*f*l-1/(2*Math.PI*f*c)));
+    System.out.println("Current is "+I+" Ampere");
+  }
+}

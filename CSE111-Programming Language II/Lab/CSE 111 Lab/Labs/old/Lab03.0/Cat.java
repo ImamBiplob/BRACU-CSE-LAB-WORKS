@@ -1,0 +1,6 @@
+public class Cat
+{ 
+  public String color = "White"; 
+  public String action = "sitting"; 
+  //your code here 
+} 
