@@ -1,0 +1,188 @@
+Assignment 1 for Annajiat’s CSE110 Thoery students
+
+Early Submission Date for 20% bonus:
+Monday, June 16 to Student Tutor (ST). Find ST at your own responsibility for early submissions.
+
+Regular Submission Date:
+Wednesday, June 18, in class to ST.
+
+Late Submission Date (50% mark will be deducted):
+Monday, June 23 to ST. Find ST at your own responsibility for late submissions.
+
+ST will check and return assignments just like quizzes.
+
+Submission instructions:
+===================
+1. Submit on plain paper. Staple before coming into the class. You can staple from DCOs room.
+2. Write date of submission, name, ID, section, course, assignment number
+3. Do NOT use an extra coversheet / front page for writing name, id etc. Write in upper right corner.
+4. You can use pen or pencil or both.
+5. Everything must be hand written / drawn. Printouts will not be accepted.
+6. It is optional for you to include a trace table of your flowchart with your assignment paper.
+7. You are not allowed to use && and || in your flowchart for this assignment.
+You are not allowed to use  && || before midterm.
+In midterm and after midterm, you may use && and II.
+
+
+Solution Style Guideline:
+=========================
+1. Your flowchart should use, proper variable names
+2. Do not forget to prompt before you take input in flowchart
+3. Do not overwrite, you may strikethrough and write at side.
+4. For flowchart, use connector/junction as necessary. All boxes will
+have one inward arrow and one outward arrow. The decision box can have
+one inward arrow and two outward arrow. The connector/junction will
+have maximum 3 inward arrow and only one outward arrow.
+5. Test your flowchart as well by going from start to end for many
+different inputs like what do we for trace table. Trace Table is a
+table with variable names and output as a columns. We record value
+changes for all variables as well as output in that table.
+I will show usage of trace tables in class. Examples are available at
+http://en.wikipedia.org/wiki/Trace_table
+ and  at
+http://en.wikibooks.org/wiki/A-level_Computing/AQA/Problem_Solving,_Programming,_Data_Representation_and_Practical_Exercise/Problem_Solving/Trace_tables
+
+Inclusion of tracetable in your solution paper is optional and no marks
+will be deducted if the table is not shown. However, you should use
+tracetable to check for correctness.
+6. If you do not understand the question,  please click reply and ask
+for clarification.
+7. Use only one condition inside a decision box. you can NOT write "
+6>= hour >=4"
+8. Try to complete this assignment with minimum number of decision
+boxes. I think you will need at least 10 decision boxes for Task 1. You can use
+as many decision boxes you need. But you should use minimum number of
+decision boxes that results in a correct solution. A correct solution
+means, it gives correct output for all inputs.
+9. You can add another page if you cannot finish in one page.  In
+class, you were shown how to connect flowcharts across multiple pages
+or different parts on the same page.
+It is simple. It is called "on page connector" which is a small circle
+and inside that, there will be a label to identify the connector.
+Illustrated example is available at
+http://www.flowhelp.com/flowchart/flowchart_connector_detail.html
+Do NOT use the "off page connector".
+
+
+Assignment01 Question:
+===================
+Draw flowchart for the following problems.
+
+
+Question 1)
+Take hour from the user as input and tell it is time for which meal.
+User will input the number in 24-hour format say 14 to mean 2pm, 3 to
+mean 3am, 18 to mean 6pm etc.
+Valid inputs are 0 to 23. Inputs less than 0 or more than 23 are
+invalid in 24-hour clock.
+Input will be whole numbers. For example, 3.5 will NOT be given as input.
+
+Inputs : Message to be printed
+4 to 6: Breakfast
+12 to 13: Lunch
+16 to 17: Snacks
+19 to 20: Dinner
+For all other valid inputs, say "Patience is a virtue"
+For all other invalid inputs, say "Wrong time"
+
+
+For example,
+If the user enters 4, your program should print the message "Breakfast".
+If the user enters 5, your program should print the message "Breakfast".
+If the user enters 6, your program should print the message "Breakfast".
+If the user enters 0, your program should print the message "Patience
+is a virtue".
+If the user enters 1, your program should print the message "Patience
+is a virtue".
+If the user enters 18, your program should print the message "Patience
+is a virtue".
+If the user enters 23, your program should print the message "Patience
+is a virtue".
+If the user enters 24, your program should print the message "Wrong Time".
+If the user enters -1, your program should print the message "Wrong Time".
+If the user enters 27, your program should print the message "Wrong time".
+
+
+
+Question 2) Assume all first semester students have 4 courses: CSE110, ENG091, MAT110, PHY111.
+Credits for these courses are 3, 0, 3, 3 respectively. 
+Take the grades of four courses from the user (out of 4.0 scale) and then print the GPA
+
+Formula:
+GPA 
+= summation of (multiplication of grade and credit of each course) divided by sum of credits
+= (grade1xcredit1 + grade2xcredit2 + grade3xcredit3 ....) / (credit1 + credit 2+credit 3   ....)
+
+
+Question 3) Ask the user for a year and the number of times to print that year. If the user gives 2014 and 5, then the output should be,
+2014
+2014
+2014
+2014
+2014
+
+
+Question 4) Ask the user for a number and print times table times table for that number. Ask the user upto what to print to. For example, if the user enters 3, 11, then the output should be:
+3 x 1 = 3
+3 x 2 = 6
+3 x 3 = 9
+3 x 4 = 12
+3 x 5 = 15
+3 x 6 = 18
+3 x 7 = 21
+3 x 8 = 24
+3 x 9 = 27
+3 x 10 = 30
+3 x 11 = 30
+
+Question 5) Ask the user for first value, change and last value of an arithmetic series and then print the series.
+If the user gives 10, 20, 134, then your program should print 10, 30, 50, 70, 90, 110, 130.
+If user gives 0, 100, 1234, then output should be 0, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200.
+
+Question 6) Same as question 5 but solve it for geometric series. If user gives 2, 10, 20000, then output should be 2, 20, 200, 2000, 20000.
+
+Read Chapter 2 of How to solve it by Computer by R G Dromey for the following questions.
+
+For question 7 to 9:
+Read Chapter 2, Article 2.1
+from: Page book: 42 (PDF:63)
+to: Page book: 47 (PDF:68)
+
+Question 7) Assume there are two variables a and b. Take Values of these variables from the user.
+For example, user gave following two values.
+a = 721
+b = 463
+Then exchange / swap values in such a way so that
+printing the variable a gives 463 and b gives 721.
+Sample Input
+721
+463
+Sample output:
+Before Exchange:
+a = 721
+b = 463
+After Exchange:
+a = 463
+b = 721
+
+
+Question 8) Solve supplementary problem 2.1.2 in page 47.
+Take value of a, b, c from the user. Then print in such a way that
+value of a goes to b
+value of b goes to c
+value of c goes to a.
+Input and output will be similar to Question 7.
+
+Question 9) Solve supplementary problem 2.1.3 in page 47.
+Input and output will be similar to Question 7.
+
+Question 10) Take a number from user and print its absolute value. If user gives minus five, print positive five. If user gives positive five, print positive five. No need to print plus sign.
+
+
+Question 11) Ask user for mark, currentScale, targetScale and then convert the mark from currentScale to targetScale. If user gives 5, 10, 30, that means quiz mark 5 is out of 10 (currentScale), convert it to 30 and print 15.
+
+
+
+Those who did not understand the question or need further help, you can take help of the ST
+
+or you can ask in the group by clicking reply to this email (instead of composing a new mail)

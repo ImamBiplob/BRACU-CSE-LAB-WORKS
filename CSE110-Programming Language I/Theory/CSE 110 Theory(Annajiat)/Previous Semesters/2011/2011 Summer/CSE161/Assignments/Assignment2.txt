@@ -1,0 +1,14 @@
+Take one number from the user. The number means clock time in 24-hour format. You should print the time in 12 hour format.
+
+If the user enters 23. You should print 11 PM.
+If the user enters 13, you should print 1 PM.
+If the user enters 4, you should print 4 AM.
+
+
+If you need more examples, visit all of the following sites
+
+http://www.lsoft.com/manuals/maestro/2.1/users/webhelp/Appendix_A_24_Hour_Clock_Time_Conversion_Table.htm
+
+http://www.easysurf.cc/cmtime.htm
+
+http://www.spacearchive.info/military.htm

@@ -1,0 +1,60 @@
+Assignment 3 for Annajiat’s CSE110 Thoery students
+
+Early Submission Date for 20% bonus:
+Wednesday, June 19 to TA. Find TA at your own responsibility for early submissions.
+
+Regular Submission Date:
+Monday, June 24, in class to TA.
+In case this day is a govt holiday, then submission will be taken on next theory class available.
+
+Late Submission Date (50% mark will be deducted):
+Thursday, June 27 to TA. . Find TA at your own responsibility  for late submissions.
+
+TA will check and return assignments just like quizzes.
+
+Submission instructions:
+===================
+1. Submit on plain paper. Staple before coming into the class. You can staple from DCOs room.
+2. Write, name, ID, section, course, assignment number
+3. Do NOT use an extra coversheet / front page for writing name, id etc.
+4. You can use pen or pencil or both.
+5. Everything must be hand written / drawn. Printouts will not be accepted.
+6. It is optional for you to include a trace table of your flowchart with your assignment paper.
+7. You cannot use && and II in your flowchart for this assignment.
+
+Solution Style Guideline:
+===================
+1. Your flowchart should use, proper variable names
+2. Do not forget to prompt before you take input in flowchart
+3. Do not overwrite, you may strikethrough and write at side.
+4. For flowchart, use connector/junction as necessary. All boxes will have one inward arrow and one outward arrow. The decision box can have one inward arrow and two outward arrow. The connector/junction will have maximum 3 inward arrow and only one outward arrow.
+5. Test your flowchart as well by going from start to end for many different inputs like what do we for trace table. Trace Table is a table with variable names and output as a columns. We record value changes for all variables as well as output in that table. 
+I will show usage of trace tables in class. Examples are available at 
+http://en.wikipedia.org/wiki/Trace_table
+ and  at
+http://en.wikibooks.org/wiki/A-level_Computing/AQA/Problem_Solving,_Programming,_Data_Representation_and_Practical_Exercise/Problem_Solving/Trace_tables
+
+Inclusion of tracetable in your solution paper is option and no marks will be deducted if the table is not shown. However, you should use tracetable to check for correctness.
+6. If you do not understand the question,  please click reply and ask for clarification.
+7. Use only one condition inside a decision box. you can NOT write " 6>= hour >=4"
+8. Try to complete this assignment with minimum number of decision boxes. I think you will need at least 10 decision boxes. You can use as many decision boxes you need. But you should use minimum number of decision boxes that results in a correct solution. A correct solution means, it gives correct output for all inputs.
+9. You can add another page if you cannot finish in one page.  In class, you were shown how to connect flowcharts across multiple pages or different parts on the same page.
+It is simple. It is called "on page connector" which is a small circle and inside that, there will be a label to identify the connector. Illustrated example is available at http://www.flowhelp.com/flowchart/flowchart_connector_detail.html
+Do NOT use the "off page connector".
+
+
+Assignment03 Question:
+===================
+Draw 3/4 variations of the flowchart for the following problem. Start with the solution shown in class.
+
+Take hour from the user as input and tell the time in 12-hour clock.
+User will input the number in 24-hour format say 14 to mean 2pm, 3 to mean 3am, 18 to mean 6pm etc.
+Valid inputs are 0 to 23. Inputs less than 0 or more than 23 are invalid in 24-hour clock.
+Input will be whole numbers. For example, 3.5 will NOT be given as input. There is no minute/second in this clock. Consider only hours.
+
+Sample Input / Output:
+Please see "Clock.xlsx" file 
+
+Those who did not understand the question or need further help,
+you can take help of the TA
+or you can ask in the group by clicking reply to this email (instead of composing a new mail)

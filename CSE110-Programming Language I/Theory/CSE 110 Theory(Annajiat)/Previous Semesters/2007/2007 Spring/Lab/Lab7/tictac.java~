@@ -1,0 +1,57 @@
+public class tictac{
+
+  static char Board[] = {' ','1','2','3', '4', '5','6','7','8','9'};
+
+  static void PrintBoard(){
+
+  }
+  static void UserMove(){
+    SimpleInput sInp = new SimpleInput();
+    int x;
+    while (true){
+      x = sInp.getInt("Make your move");
+      if (x>=1 && x<=9 && Board[x] != 'X' && Board[x] != 'O'){
+        Board[x] = 'O';
+        PrintBoard();
+        break;
+      }
+    }
+  }
+
+  static boolean  CheckWin(char ch){
+    if ((Board[1] == ch && Board[2] == ch  && Board[3] == ch ) ||
+
+  }
+
+
+  static void CompMove(){
+
+  }
+
+
+  public static void main(String args[]){
+
+    PrintBoard();
+
+    while (true){
+      UserMove();
+      if (CheckWin('O')==true){
+        System.out.println("Congrats!!! You Won");
+        break;
+      }
+
+      CompMove();
+      if (CheckWin('X')==true){
+        System.out.println("You Lost & Computer Won");
+        break;
+      }
+
+
+
+    }
+
+  }
+
+
+
+}

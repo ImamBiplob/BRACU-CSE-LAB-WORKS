@@ -1,0 +1,9 @@
+Assignment 1) Due on Monday, 10 June 2013
+Assume all first semester students have 4 courses: CSE110, ENG091, MAT110, PHY111.
+Credits for these courses are 3, 0, 3, 3 respectively. 
+Take the grades from the user for each of the courses (out of 4.0 scale)
+Print GPA
+
+GPA 
+= summation of (multiplication of grade and credit of each course) divided by sum of credits
+= (grade1xcredit1 + grade2xcredit2 + grade3xcredit3 ....) / (credit1 + credit 2+credit 3   ....)

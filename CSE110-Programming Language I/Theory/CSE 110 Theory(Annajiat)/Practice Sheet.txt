@@ -1,0 +1,97 @@
+Day 1: Monday, November 10
+Question 1 to 5
+
+Day 2: Wednesday, November 12
+Question 6 to 7
+
+
+Question 1) Assume all first semester students have 4 courses: CSE110, ENG091, MAT110, PHY111.
+Credits for these courses are 3, 0, 3, 3 respectively. 
+Take the grades of four courses from the user (out of 4.0 scale) and then print the GPA
+
+Formula:
+GPA 
+= summation of (multiplication of grade and credit of each course) divided by sum of credits
+= (grade1xcredit1 + grade2xcredit2 + grade3xcredit3 ....) / (credit1 + credit 2+credit 3   ....)
+
+
+
+Question 2) Ask user for mark, currentScale, targetScale and then convert the mark from currentScale to targetScale. 
+If user gives 5, 10, 30, that means quiz mark 5 is out of 10 (currentScale), convert it to 30 and print 15.
+
+
+
+Question 3) Assume there are two variables a and b. Take Values of these variables from the user.
+For example, user gave following two values.
+a = 721
+b = 463
+Then exchange / swap values in such a way so that
+printing the variable a gives 463 and b gives 721.
+Sample Input
+721
+463
+Sample output:
+Before Exchange:
+a = 721
+b = 463
+After Exchange:
+a = 463
+b = 721
+
+
+Question 4) 
+Take value of a, b, c from the user. Then print in such a way that
+value of a goes to b
+value of b goes to c
+value of c goes to a.
+Input and output will be similar to Question 3.
+It is the same problem as supplementary problem 2.1.2 in page 47 of How to solve it by computer.
+
+Question 5) 
+Take value of a, b, c, d from the user. Then print in such a way that
+value of d goes to c
+value of c goes to b
+value of b goes to a
+value of a goes to d.
+Input and output will be similar to Question 3.
+It is the same problem as supplementary problem 2.1.3 in page 47 of How to solve it by computer.
+
+
+
+Question 6) Take a number from user and print its absolute value. If user gives minus five, print positive five. If user gives positive five, print positive five. No need to print plus sign.
+
+
+
+
+Question 7)
+Take hour from the user as input and tell it is time for which meal.
+User will input the number in 24-hour format say 14 to mean 2pm, 3 to
+mean 3am, 18 to mean 6pm etc.
+Valid inputs are 0 to 23. Inputs less than 0 or more than 23 are
+invalid in 24-hour clock.
+Input will be whole numbers. For example, 3.5 will NOT be given as input.
+
+Inputs : Message to be printed
+4 to 6: Breakfast
+12 to 13: Lunch
+16 to 17: Snacks
+19 to 20: Dinner
+For all other valid inputs, say "Patience is a virtue"
+For all other invalid inputs, say "Wrong time"
+
+
+For example,
+If the user enters 4, your program should print the message "Breakfast".
+If the user enters 5, your program should print the message "Breakfast".
+If the user enters 6, your program should print the message "Breakfast".
+If the user enters 0, your program should print the message "Patience
+is a virtue".
+If the user enters 1, your program should print the message "Patience
+is a virtue".
+If the user enters 18, your program should print the message "Patience
+is a virtue".
+If the user enters 23, your program should print the message "Patience
+is a virtue".
+If the user enters 24, your program should print the message "Wrong Time".
+If the user enters -1, your program should print the message "Wrong Time".
+If the user enters 27, your program should print the message "Wrong time".

@@ -1,0 +1,26 @@
+NOTE: For any submissions, your are not allowed to share solution or work together in building the solution.
+
+To class,
+Draw the flowchart of a program that takes an input H (Hour) in 24 hour format, print the equivalent time (Hour) in 12 hour format (AM/PM). If you need help, consult TA. Submit to TA before midterm. If you finally cannot solve, partial solutions/attempts with your thoughts are welcome. If you expect TA to return your submission, submit by Tomorrow.
+
+Example Input 1:
+15
+
+Example Output 1:
+3 PM
+
+
+Example Input 2:
+7
+
+Example Output 2:
+7 AM
+
+
+If you are confused,consult http://en.wikipedia.org/wiki/24-hour_clock    and TA
+
+
+
+Aysha,
+If you find copy/unfair means or match between solutions from two students, mark -5 (minus)
+For correction answer, mark +5

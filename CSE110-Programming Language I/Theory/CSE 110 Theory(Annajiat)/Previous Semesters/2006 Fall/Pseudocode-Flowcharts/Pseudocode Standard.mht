@@ -1,0 +1,471 @@
+From: <Saved by Microsoft Internet Explorer 5>
+Subject: Pseudocode Standard
+Date: Mon, 5 Jun 2006 13:49:08 +0600
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.csc.calpoly.edu/~jdalbey/SWE/pdl_std.html
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2800.1807
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Pseudocode Standard</TITLE>
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Diso-8859-1">
+<META content=3D"MSHTML 6.00.2800.1543" name=3DGENERATOR><!-- Converted =
+by AscToHTM 3.3 - unregistered version : 0 (visit www.jafsoft.com) =
+--></HEAD>
+<BODY>
+<BLOCKQUOTE>
+  <CENTER>
+  <H3>PSEUDOCODE STANDARD</H3></CENTER></BLOCKQUOTE>Pseudocode is a kind =
+of=20
+structured english for describing algorithms. It allows the designer to =
+focus on=20
+the logic of the algorithm without being distracted by details of =
+language=20
+syntax.&nbsp; At the same time, the pseudocode needs to be =
+complete.&nbsp; It=20
+describe the entire logic of the algorithm so that implementation =
+becomes a rote=20
+mechanical task of translating line by line into source code.=20
+<P>In general the vocabulary used in the pseudocode should be the =
+vocabulary of=20
+the problem domain, not of the implementation domain.&nbsp; The =
+pseudocode is a=20
+narrative for someone who knows the requirements (problem domain) and is =
+trying=20
+to learn how the solution is organized.&nbsp; E.g., </P>
+<BLOCKQUOTE>Extract the next word from the line (good) <BR>set word to =
+get=20
+  next token (poor)=20
+  <P>Append the file extension to the name (good) <BR>name =3D name + =
+extension=20
+  (poor) </P>
+  <P>FOR all the characters in the name (good) <BR>FOR character =3D =
+first to last=20
+  (ok)</P></BLOCKQUOTE>Note that the logic must be decomposed to the =
+level of a=20
+single loop or decision. Thus "Search the list and find the customer =
+with=20
+highest balance" is too vague because it takes a loop AND a nested =
+decision to=20
+implement it. It's okay to use "Find" or "Lookup" if there's a =
+predefined=20
+function for it such as <CODE>String.indexOf()</CODE>.=20
+<P>Each textbook and each individual designer may have their own =
+personal style=20
+of pseudocode. Pseudocode is not a rigorous notation, since it is read =
+by other=20
+people, not by the computer. There is no universal "standard" for the =
+industry,=20
+but for instructional purposes it is helpful if we all follow a similar =
+style.=20
+The format below is recommended for expressing your solutions in our =
+class. </P>
+<P>The "structured" part of pseudocode is a notation for representing =
+six=20
+specific structured programming constructs: SEQUENCE, WHILE, =
+IF-THEN-ELSE,=20
+REPEAT-UNTIL, FOR, and CASE. Each of these constructs can be embedded =
+inside any=20
+other construct. These constructs represent the logic, or flow of =
+control in an=20
+algorithm. </P>
+<P>It has been proven that three basic constructs for flow of control =
+are=20
+sufficient to implement any "proper" algorithm. </P>
+<BLOCKQUOTE><B>SEQUENCE</B> is a linear progression where one task is=20
+  performed sequentially after another. <BR><B>WHILE</B> is a loop =
+(repetition)=20
+  with a simple conditional test at its beginning. =
+<BR><B>IF-THEN-ELSE</B> is a=20
+  decision (selection) in which a choice is made between two alternative =
+courses=20
+  of action.</BLOCKQUOTE>
+<P><BR>Although these constructs are sufficient, it is often useful to =
+include=20
+three more constructs: <BR>&nbsp; </P>
+<BLOCKQUOTE><B>REPEAT-UNTIL</B> is a loop with a simple conditional test =
+at=20
+  the bottom. <BR><B>CASE</B> is a multiway branch (decision) based on =
+the value=20
+  of an expression. CASE is a generalization of IF-THEN-ELSE. <BR><B>FOR =
+</B>is=20
+  a "counting" loop.</BLOCKQUOTE><B>SEQUENCE</B>=20
+<P>Sequential control is indicated by writing one action after another, =
+each=20
+action on a line by itself, and all actions aligned with the same =
+indent. The=20
+actions are performed in the sequence (top to bottom) that they are =
+written.=20
+</P>
+<P>Example (non-computer) </P>
+<BLOCKQUOTE>Brush teeth <BR>Wash face <BR>Comb hair <BR>Smile in=20
+mirror</BLOCKQUOTE>Example=20
+<BLOCKQUOTE>READ height of rectangle <BR>READ width of rectangle =
+<BR>COMPUTE=20
+  area as height times width</BLOCKQUOTE>Common Action Keywords=20
+<BLOCKQUOTE>Several keywords are often used to indicate common input, =
+output,=20
+  and processing operations.=20
+  <BLOCKQUOTE>Input: READ, OBTAIN, GET <BR>Output: PRINT, DISPLAY, SHOW=20
+    <BR>Compute: COMPUTE, CALCULATE, DETERMINE <BR>Initialize: SET, INIT =
+<BR>Add=20
+    one: INCREMENT, BUMP</BLOCKQUOTE></BLOCKQUOTE><B>IF-THEN-ELSE</B>=20
+<P>Binary choice on a given Boolean condition is indicated by the use of =
+four=20
+keywords: IF, THEN, ELSE, and ENDIF. The general form is: </P>
+<BLOCKQUOTE>IF condition THEN=20
+  <BLOCKQUOTE>sequence 1</BLOCKQUOTE>ELSE=20
+  <BLOCKQUOTE>sequence 2</BLOCKQUOTE>ENDIF</BLOCKQUOTE>The ELSE keyword =
+and=20
+"sequence 2" are optional. If the condition is true, sequence 1 is =
+performed,=20
+otherwise sequence 2 is performed.=20
+<P>Example </P>
+<BLOCKQUOTE><TT>IF HoursWorked &gt; NormalMax THEN</TT>=20
+  <BLOCKQUOTE><TT>Display overtime =
+message</TT></BLOCKQUOTE><TT>ELSE</TT>=20
+  <BLOCKQUOTE><TT>Display regular time=20
+message</TT></BLOCKQUOTE><TT>ENDIF</TT></BLOCKQUOTE><B>WHILE</B>=20
+<P>The WHILE construct is used to specify a loop with a test at the top. =
+The=20
+beginning and ending of the loop are indicated by two keywords WHILE and =
+
+ENDWHILE. The general form is: </P>
+<BLOCKQUOTE>WHILE condition=20
+  <BLOCKQUOTE>sequence</BLOCKQUOTE>ENDWHILE</BLOCKQUOTE>The loop is =
+entered only=20
+if the condition is true. The "sequence" is performed for each =
+iteration. At the=20
+conclusion of each iteration, the condition is evaluated and the loop =
+continues=20
+as long as the condition is true.=20
+<P>Example </P>
+<BLOCKQUOTE><TT>WHILE Population &lt; Limit</TT>=20
+  <BLOCKQUOTE><TT>Compute Population as Population + Births -=20
+  Deaths</TT></BLOCKQUOTE><TT>ENDWHILE</TT></BLOCKQUOTE>
+<P>Example </P>
+<BLOCKQUOTE><TT>WHILE employee.type NOT EQUAL manager AND personCount =
+&lt;=20
+  numEmployees</TT>=20
+  <BLOCKQUOTE><TT>INCREMENT personCount<BR>CALL employeeList.getPerson =
+with=20
+    personCount RETURNING=20
+employee<BR></TT></BLOCKQUOTE><TT>ENDWHILE</TT></BLOCKQUOTE><B>CASE</B>=20
+<P>A CASE construct indicates a multiway branch based on conditions that =
+are=20
+mutually exclusive. Four keywords, CASE, OF, OTHERS, and ENDCASE, and =
+conditions=20
+are used to indicate the various alternatives. The general form is: </P>
+<BLOCKQUOTE>CASE expression OF=20
+  <BLOCKQUOTE>condition 1 : sequence 1 <BR>condition 2 : sequence 2 =
+<BR>...=20
+    <BR>condition n : sequence n <BR>OTHERS: <BR>default=20
+  sequence</BLOCKQUOTE>ENDCASE=20
+  <P>The OTHERS clause with its default sequence is optional. Conditions =
+are=20
+  normally numbers or characters</P></BLOCKQUOTE>indicating the value of =
+
+"expression", but they can be English statements or some other notation =
+that=20
+specifies the condition under which the given sequence is to be =
+performed. A=20
+certain sequence may be associated with more than one condition.=20
+<P>Example <BR><!-- User-specified pre-formatted text =
+--></P><PRE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CASE&nbsp; =
+Title&nbsp; =
+OF<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp; Mr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : Print =
+"Mister"<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mrs&nbsp;&nbsp;&nbsp;&nbsp; : Print =
+"Missus"<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Miss&nbsp;&nbsp;&nbsp; : Print =
+"Miss"<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp; Ms&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : Print =
+"Mizz"<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp; Dr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : Print =
+"Doctor"<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ENDCASE</PRE><!-- =
+end of user-specified pre-formatted text -->
+<P>Example <BR><!-- User-specified pre-formatted text =
+--></P><PRE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CASE&nbsp; =
+grade&nbsp; =
+OF<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp; A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : points =
+=3D =
+4<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp; B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : points =
+=3D =
+3<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp; C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : points =
+=3D =
+2<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : points =
+=3D =
+1<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp; F&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : points =
+=3D 0<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ENDCASE</PRE><!-- =
+end of user-specified pre-formatted text -->
+<P><B>REPEAT-UNTIL</B> </P>
+<P>This loop is similar to the WHILE loop except that the test is =
+performed at=20
+the bottom of the loop instead of at the top. Two keywords, REPEAT and =
+UNTIL are=20
+used. The general form is: </P>
+<BLOCKQUOTE>REPEAT=20
+  <BLOCKQUOTE>sequence</BLOCKQUOTE>UNTIL condition</BLOCKQUOTE>The =
+"sequence" in=20
+this type of loop is always performed at least once, because the test is =
+
+peformed after the sequence is executed. At the conclusion of each =
+iteration,=20
+the condition is evaluated, and the loop repeats if the condition is =
+false. The=20
+loop terminates when the condition becomes true. <BR>&nbsp;=20
+<P><B>FOR</B> </P>
+<P>This loop is a specialized construct for iterating a specific number =
+of=20
+times, often called a "counting" loop.&nbsp; Two keywords, FOR and =
+ENDFOR are=20
+used. The general form is: </P>
+<BLOCKQUOTE>FOR iteration bounds=20
+  <BLOCKQUOTE>sequence</BLOCKQUOTE>ENDFOR</BLOCKQUOTE>In cases where the =
+loop=20
+constraints can be obviously inferred it is best to describe the loop =
+using=20
+problem domain vocabulary.=20
+<P>Example </P>
+<BLOCKQUOTE>FOR each month of the year (good) <BR>FOR month =3D 1 to 12 =
+(ok)=20
+  <P>FOR each employee in the list (good) <BR>FOR empno =3D 1 to =
+listsize=20
+(ok)</P></BLOCKQUOTE>
+<P><BR><B>NESTED CONSTRUCTS</B> </P>
+<P>The constructs can be embedded within each other, and this is made =
+clear by=20
+use of indenting. Nested constructs should be clearly indented from =
+their=20
+surrounding constructs. </P>
+<P>Example </P>
+<BLOCKQUOTE><TT>SET total to zero</TT> <BR><TT>REPEAT</TT>=20
+  <BLOCKQUOTE><TT>READ Temperature</TT> <BR><TT>IF Temperature &gt; =
+Freezing=20
+    THEN</TT> <BR><TT>&nbsp;&nbsp;&nbsp; INCREMENT total</TT> =
+<BR><TT>END=20
+  IF</TT></BLOCKQUOTE><TT>UNTIL Temperature &lt; zero</TT> <BR><TT>Print =
+
+  total</TT></BLOCKQUOTE>In the above example, the IF construct is =
+nested within=20
+the REPEAT construct, and therefore is indented. <BR>&nbsp; <BR>&nbsp;=20
+<P><B>INVOKING SUBPROCEDURES</B> </P>
+<P>Use the <TT>CALL</TT> keyword. For example: </P>
+<BLOCKQUOTE><TT>CALL AvgAge with StudentAges</TT> <BR><TT>CALL Swap with =
+
+  CurrentItem and TargetItem</TT> <BR><TT>CALL Account.debit with=20
+  CheckAmount</TT> <BR><TT>CALL getBalance RETURNING aBalance</TT> =
+<BR><TT>CALL=20
+  SquareRoot with orbitHeight RETURNING =
+nominalOrbit</TT></BLOCKQUOTE><!-- Converted by AscToHTM 3.3 - =
+unregistered version : 0 (visit www.jafsoft.com) -->
+<P></P><BR><B>EXCEPTION HANDLING</B><BR><BR><SPAN=20
+style=3D"FONT-FAMILY: monospace">&nbsp;&nbsp;&nbsp;&nbsp;BEGIN =
+</SPAN><BR=20
+style=3D"FONT-FAMILY: monospace"><SPAN=20
+style=3D"FONT-FAMILY: =
+monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+statements </SPAN><BR style=3D"FONT-FAMILY: monospace"><SPAN=20
+style=3D"FONT-FAMILY: monospace">&nbsp;&nbsp;&nbsp;&nbsp;EXCEPTION =
+</SPAN><BR=20
+style=3D"FONT-FAMILY: monospace"><SPAN=20
+style=3D"FONT-FAMILY: =
+monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WHEN=20
+exception type </SPAN><BR style=3D"FONT-FAMILY: monospace"><SPAN=20
+style=3D"FONT-FAMILY: =
+monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;=20
+statements to handle exception</SPAN><BR style=3D"FONT-FAMILY: =
+monospace"><SPAN=20
+style=3D"FONT-FAMILY: =
+monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WHEN=20
+another exception type </SPAN><BR style=3D"FONT-FAMILY: monospace"><SPAN =
+
+style=3D"FONT-FAMILY: =
+monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;=20
+statements </SPAN><SPAN style=3D"FONT-FAMILY: monospace">to handle=20
+exception</SPAN><BR style=3D"FONT-FAMILY: monospace"><SPAN=20
+style=3D"FONT-FAMILY: monospace">&nbsp;&nbsp;&nbsp;&nbsp;END </SPAN><BR=20
+style=3D"FONT-FAMILY: monospace"><BR><BR>
+<HR width=3D"100%">
+
+<CENTER>
+<H3>Sample Pseudocode</H3></CENTER>"Adequate"<BR><SPAN=20
+style=3D"FONT-FAMILY: monospace"><BR>FOR X =3D 1 to 10 </SPAN><BR=20
+style=3D"FONT-FAMILY: monospace"><SPAN=20
+style=3D"FONT-FAMILY: monospace">&nbsp;&nbsp;&nbsp; FOR Y =3D 1 to 10 =
+</SPAN><BR=20
+style=3D"FONT-FAMILY: monospace"><SPAN=20
+style=3D"FONT-FAMILY: =
+monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IF=20
+gameBoard[X][Y] =3D 0 </SPAN><BR style=3D"FONT-FAMILY: monospace"><SPAN=20
+style=3D"FONT-FAMILY: =
+monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;=20
+Do nothing </SPAN><BR style=3D"FONT-FAMILY: monospace"><SPAN=20
+style=3D"FONT-FAMILY: =
+monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ELSE=20
+</SPAN><BR style=3D"FONT-FAMILY: monospace"><SPAN=20
+style=3D"FONT-FAMILY: =
+monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;=20
+CALL theCall(X, Y) (recursive method) </SPAN><BR=20
+style=3D"FONT-FAMILY: monospace"><SPAN=20
+style=3D"FONT-FAMILY: =
+monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;=20
+increment counter&nbsp;=20
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;=20
+</SPAN><BR style=3D"FONT-FAMILY: monospace"><SPAN=20
+style=3D"FONT-FAMILY: monospace">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; =
+END=20
+IF</SPAN><BR style=3D"FONT-FAMILY: monospace"><SPAN=20
+style=3D"FONT-FAMILY: monospace">&nbsp;&nbsp;&nbsp; END FOR</SPAN><BR=20
+style=3D"FONT-FAMILY: monospace"><SPAN style=3D"FONT-FAMILY: =
+monospace">END=20
+FOR</SPAN><BR style=3D"FONT-FAMILY: monospace"><BR>
+<P>"Better" </P><SPAN style=3D"FONT-FAMILY: monospace">Set moveCount to=20
+1</SPAN><BR><SPAN style=3D"FONT-FAMILY: monospace">FOR each row on the =
+board=20
+</SPAN><BR style=3D"FONT-FAMILY: monospace"><SPAN=20
+style=3D"FONT-FAMILY: monospace">&nbsp;&nbsp;&nbsp; FOR each column on =
+the board=20
+</SPAN><BR style=3D"FONT-FAMILY: monospace"><SPAN=20
+style=3D"FONT-FAMILY: =
+monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IF=20
+gameBoard position (row, column) is occupied THEN </SPAN><BR=20
+style=3D"FONT-FAMILY: monospace"><SPAN=20
+style=3D"FONT-FAMILY: =
+monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;=20
+CALL findAdjacentTiles with row, column</SPAN><BR=20
+style=3D"FONT-FAMILY: monospace"><SPAN=20
+style=3D"FONT-FAMILY: =
+monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;=20
+INCREMENT moveCount </SPAN><BR style=3D"FONT-FAMILY: monospace"><SPAN=20
+style=3D"FONT-FAMILY: =
+monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; END IF=20
+</SPAN><BR style=3D"FONT-FAMILY: monospace"><SPAN=20
+style=3D"FONT-FAMILY: monospace">&nbsp;&nbsp;&nbsp; END FOR</SPAN><BR=20
+style=3D"FONT-FAMILY: monospace"><SPAN style=3D"FONT-FAMILY: =
+monospace">END=20
+FOR</SPAN><BR style=3D"FONT-FAMILY: monospace"><BR>(Note: the logic is=20
+restructured to omit the "do nothing" clause) <BR>
+<HR width=3D"100%">
+<BR>"Not So Good"=20
+<P><TT>FOR all the number at the back of the array</TT>=20
+<BR><TT>&nbsp;&nbsp;&nbsp; SET Temp equal the addition of each =
+number</TT>=20
+<BR><TT>&nbsp;&nbsp;&nbsp; IF &gt; 9 THEN</TT>=20
+<BR><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; get the remainder of =
+the=20
+number divided by 10 to that index</TT>=20
+<BR><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and carry the =
+"1"</TT>=20
+<BR><TT>&nbsp;&nbsp;&nbsp; Decrement one</TT> <BR><TT>Do it again for =
+numbers=20
+before the decimal</TT> <BR>&nbsp; </P>
+<P>"Good Enough (not perfect)" </P>
+<P><TT>SET Carry to 0</TT> <BR><TT>FOR each DigitPosition in Number from =
+least=20
+significant to most significant</TT> </P>
+<P><TT>&nbsp;&nbsp;&nbsp; COMPUTE Total as sum of =
+FirstNum[DigitPosition] and=20
+SecondNum[DigitPosition] and Carry</TT> &nbsp;<BR></P>
+<P><TT>&nbsp;&nbsp;&nbsp; IF Total &gt; 10 THEN</TT>=20
+<BR><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SET Carry to 1</TT>=20
+<BR><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SUBTRACT 10 from =
+Total</TT>=20
+<BR><TT>&nbsp;&nbsp;&nbsp; ELSE</TT>=20
+<BR><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SET Carry to 0</TT>=20
+<BR><TT>&nbsp;&nbsp;&nbsp; END IF</TT> </P>
+<P><TT>&nbsp;&nbsp;&nbsp; STORE Total in Result[DigitPosition]</TT> </P>
+<P><TT>END LOOP</TT> &nbsp;<BR></P>
+<P><TT>IF Carry =3D 1 THEN</TT> <BR><TT>&nbsp;&nbsp;&nbsp; RAISE =
+Overflow=20
+exception</TT> <BR><TT>END IF</TT> <BR>&nbsp; </P>
+<P></P>
+<HR style=3D"WIDTH: 100%; HEIGHT: 2px">
+<BR>
+<P>"Pretty Good"&nbsp; This example shows how pseudocode is written as =
+comments=20
+in the source file. Note that the double slashes are indented. </P>
+<P><TT>public boolean moveRobot (Robot aRobot)</TT> <BR><TT>{</TT>=20
+<BR><TT>&nbsp;&nbsp;&nbsp; //IF robot has no obstacle in front THEN</TT> =
+
+<BR><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Call Move =
+robot</TT>=20
+<BR><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Add the move =
+command to=20
+the command history</TT> =
+<BR><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //=20
+RETURN true</TT> <BR><TT>&nbsp;&nbsp;&nbsp; //ELSE</TT>=20
+<BR><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // RETURN false =
+without=20
+moving the robot</TT> <BR><TT>&nbsp;&nbsp;&nbsp; //END IF</TT> =
+<BR><TT>}</TT>=20
+</P>
+<P>Example Java Implementation </P>
+<UL>
+  <LI>source code statements are interleaved with pseudocode.=20
+  <LI>comments that correspond exactly to source code are removed during =
+coding.=20
+  </LI></UL>
+<P></P>
+<P><TT>public boolean moveRobot (Robot aRobot)</TT> <BR><TT>{</TT>=20
+<BR><TT>&nbsp;&nbsp;&nbsp; //IF </TT><TT>robot has no o</TT><TT>bstacle =
+in front=20
+THEN</TT> <BR><TT>&nbsp;&nbsp;&nbsp; if (aRobot.isFrontClear())</TT>=20
+<BR><TT>&nbsp;&nbsp;&nbsp; {</TT>=20
+<BR><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Call Move =
+robot</TT>=20
+<BR><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; aRobot.move();</TT>=20
+<BR><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Add the move =
+command to=20
+the command history</TT> =
+<BR><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+cmdHistory.add(RobotAction.MOVE);</TT>=20
+<BR><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return true;</TT>=20
+<BR><TT>&nbsp;&nbsp;&nbsp; }</TT> <BR><TT>&nbsp;&nbsp;&nbsp; else // =
+don't move=20
+the robot</TT> <BR><TT>&nbsp;&nbsp;&nbsp; {</TT>=20
+<BR><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return false;</TT>=20
+<BR><TT>&nbsp;&nbsp;&nbsp; }//END IF</TT> <BR><TT>}</TT> <BR>&nbsp; =
+<BR></P>
+<DIV align=3Dcenter>
+<H4>&nbsp;<A =
+href=3D"http://www.csc.calpoly.edu/~jdalbey/SWE/pdl_vague.html">=20
+Examples of vague pseudocode</A></H4></DIV>
+<P> </P>
+<P></P>
+<HR width=3D"100%">
+<BR>Document History=20
+<TABLE width=3D"100%" border=3D1>
+  <TBODY>
+  <TR>
+    <TD>Date</TD>
+    <TD>Author</TD>
+    <TD>Change</TD></TR>
+  <TR>
+    <TD style=3D"VERTICAL-ALIGN: top">12/2/03<BR></TD>
+    <TD style=3D"VERTICAL-ALIGN: top">JD<BR></TD>
+    <TD style=3D"VERTICAL-ALIGN: top">Added Exception Handling and more=20
+      examples<BR></TD></TR>
+  <TR>
+    <TD>2/21/03</TD>
+    <TD>JD</TD>
+    <TD>Added "problem domain vocabulary" paragraph. <BR>Modified FOR =
+loop=20
+      explanation.</TD></TR></TBODY></TABLE></BODY></HTML>

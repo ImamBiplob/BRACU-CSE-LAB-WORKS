@@ -1,0 +1,12 @@
+CSE110          Quiz 5        THU 09/12/2010
+Time: 20 minutes
+Section One
+
+Instruction: Do not use anything but notepad and calculator.
+
+Name: 
+ID: 
+
+Write a complete pseudo-code of a program, which takes 8 quiz grades (assume all quizzes are out of 10) and show the user the total and average of the worst five grades.
+
+Your Answer:

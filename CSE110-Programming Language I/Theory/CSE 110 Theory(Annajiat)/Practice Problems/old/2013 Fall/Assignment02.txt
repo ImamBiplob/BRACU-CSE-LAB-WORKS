@@ -1,0 +1,19 @@
+Assignment 2 for Annajiat’s CSE110 Thoery students
+
+Early  Submission Date for 20% bonus:
+Monday, October 28 to TA. Find TA at your own responsibility for early
+submissions.
+
+Regular Submission Date:
+Wednesday, October 30, in class to TA.
+
+Late Submission Date (50% mark will be deducted):
+Monday, November 4 to TA. Find TA at your own responsibility  for
+late submissions.
+
+TA will check and return assignments just like quizzes.
+
+
+Assignment02 Question:
+===================
+Write the java code of assignment 1.

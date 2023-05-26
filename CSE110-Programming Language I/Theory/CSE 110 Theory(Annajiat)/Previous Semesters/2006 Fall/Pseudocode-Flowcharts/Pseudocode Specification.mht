@@ -1,0 +1,760 @@
+From: <Saved by Microsoft Internet Explorer 5>
+Subject: Pseudocode Specification
+Date: Mon, 5 Jun 2006 13:26:13 +0600
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_01C688A3.9DB1A670"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2800.1807
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_01C688A3.9DB1A670
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.nongnu.org/kardsgt/pseudocode.html
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" =
+"http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML><HEAD><TITLE>Pseudocode Specification</TITLE>
+<META lang=3Den http-equiv=3DContent-Type content=3D"text/html; =
+charset=3DISO-8859-1">
+<META content=3D"My pseudocode standard for all my projects." =
+name=3Ddescription>
+<META content=3D"pseudocode, standard, example, kwrite, kate, syntax, =
+highlighter"=20
+name=3Dkeywords><LINK =
+href=3D"http://www.nongnu.org/kardsgt/pseudocode.css"=20
+type=3Dtext/css rel=3DStyleSheet>
+<META content=3D"MSHTML 6.00.2800.1543" name=3DGENERATOR></HEAD>
+<BODY>
+<DIV id=3Dtop align=3Dcenter>
+<H1>Pseudocode Language Specification <BR></H1>version 0.6 <BR>Quick =
+Access: <A=20
+href=3D"http://john.lutheran.com/projects/gpc/pseudocode.html#features">F=
+eatures=20
+and Rules </A>=97 <A=20
+href=3D"http://john.lutheran.com/projects/gpc/pseudocode.html#listing">Ke=
+yword=20
+Glossary </A>=97 <A=20
+href=3D"http://john.lutheran.com/projects/gpc/pseudocode.html#files">Pseu=
+docode=20
+Files </A>
+<HR>
+</DIV><!-- Why this page exists -->
+<DIV align=3Djustify>
+<H2>Purpose </H2>
+<P>I believe that doing pseudocode before you code points out many =
+problems and=20
+allows clear thinking. I also think that pseudocode is the quickest way =
+to=20
+communicate your ideas across to other developers. To speed things along =
+I have=20
+created this document to give the information needed for other =
+developers to=20
+read and write in pseudocode. I have based it upon what I have learnt at =
+
+university, and made further refinements to create an object-oriented =
+pseudocode=20
+language that is independent of any one language. I am happy to take =
+suggestions=20
+and make improvements. </P></DIV><A=20
+href=3D"http://john.lutheran.com/projects/gpc/pseudocode.html#top">Back =
+to the top=20
+of the page </A><BR><!-- Language Features -->
+<H2 id=3Dfeatures>Features and Rules </H2>
+<P>Below is a short line by line listing of the features and rules of =
+the=20
+pseudocode language. This is not quite an exhaustive list but if you =
+have=20
+already programmed before then you'll be able to pick up the subtle =
+aspects from=20
+the example files, and as I have said before, any questions just ask me. =
+</P>
+<UL>
+  <LI>The only basic types are boolean, character, string, integer, and =
+real.=20
+  <LI>Types can be expanded that are specific to a project. For example =
+if you=20
+  have a programme "A" that has a class called foo in the pseudocode for =
+a class=20
+  called bar you can instantiate foo.=20
+  <LI>To ease development for general compiling all pseudocode files end =
+with=20
+  the extentions pc, so that they are ignored by the GCC compiler.=20
+  <LI>Everything should be done "fairly high". I know it's imprecise but =
+your=20
+  implementation should be detailed enough for any programmer to grasp =
+an=20
+  understanding on how your code works.=20
+  <LI>Each statement must end with a semi-colon(;).=20
+  <LI>You should comment the pseudocode just like normal code.=20
+  <LI>Class names are capitalised and function names are lowercased as a =
+general=20
+  convention.=20
+  <LI>Language calls to the target language from within the pseudocode =
+is=20
+  allowed.=20
+  <LI>Descriptive functions are allowed in the pseudocode. For an =
+example,=20
+  clearScreen().=20
+  <LI>Statements are evaluated from right to left, top to bottom.=20
+  <LI>As a general rule, you want to keep each class in its own =
+pseudocode file=20
+  for added clarity.=20
+  <LI>A variable name can consist of any combinations of letters, =
+numbers, and=20
+  the underscore(_). However, the first character in a variable must be =
+a=20
+  letter.=20
+  <LI>This language is case-sensitive. </LI></UL><A=20
+href=3D"http://john.lutheran.com/projects/gpc/pseudocode.html#top">Back =
+to the top=20
+of the page </A><BR><!-- Kewords -->
+<H3 id=3Dlisting align=3Dcenter>Keyword Glossary </H3>
+<P>If you are just starting out I recommend that you read it from the =
+top to the=20
+bottom as I have tried to arrange it so that each section will build on =
+previous=20
+knowledge. After you have read the specification, then you'll be able to =
+
+understand the example file much better. If you have any questions feel =
+free to=20
+ask me about them. Below is a quick reference to the various sections =
+addressed=20
+in the pseudocode specification. If you already familiar with it, then =
+it'll be=20
+of great use as a reference. </P>
+<DIV align=3Dcenter>Sections: <A=20
+href=3D"http://john.lutheran.com/projects/gpc/pseudocode.html#comments">C=
+omments=20
+</A>=97 <A=20
+href=3D"http://john.lutheran.com/projects/gpc/pseudocode.html#maths">Math=
+s=20
+Operators </A>=97 <A=20
+href=3D"http://john.lutheran.com/projects/gpc/pseudocode.html#literals">L=
+iterals=20
+</A>=97 <A=20
+href=3D"http://john.lutheran.com/projects/gpc/pseudocode.html#statments">=
+Statement=20
+Blocks </A>=97 <A=20
+href=3D"http://john.lutheran.com/projects/gpc/pseudocode.html#grouping">G=
+rouping=20
+</A>=97 <A=20
+href=3D"http://john.lutheran.com/projects/gpc/pseudocode.html#variables">=
+Variables=20
+</A>=97 <A =
+href=3D"http://john.lutheran.com/projects/gpc/pseudocode.html#io">Input=20
+&amp; Output </A>=97 <A=20
+href=3D"http://john.lutheran.com/projects/gpc/pseudocode.html#conditional=
+s">Conditional=20
+Construction </A>=97 <A=20
+href=3D"http://john.lutheran.com/projects/gpc/pseudocode.html#loops">Loop=
+=20
+Construction </A>=97 <A=20
+href=3D"http://john.lutheran.com/projects/gpc/pseudocode.html#arrays">Arr=
+ays </A>=97=20
+<A=20
+href=3D"http://john.lutheran.com/projects/gpc/pseudocode.html#functions">=
+Functions=20
+</A>=97 <A=20
+href=3D"http://john.lutheran.com/projects/gpc/pseudocode.html#classes">Cl=
+asses=20
+&amp; ADTs </A>=97 <A=20
+href=3D"http://john.lutheran.com/projects/gpc/pseudocode.html#error">Erro=
+r=20
+Handling </A>=97 <A=20
+href=3D"http://john.lutheran.com/projects/gpc/pseudocode.html#top">Back =
+to the top=20
+of the page </A></DIV><BR><!-- Comment Section -->
+<H4 id=3Dcomments>Comments: </H4>As with any good code it should be =
+commented=20
+well. Comments are of course not executed like normal languages. =
+Multiline=20
+comments are surrounded by braces {}. Single line comments use the hash =
+mark #.=20
+Comments should be written assuming that they will carry over into the =
+code. For=20
+an example: <BR>
+<DIV class=3Dexample><STRONG>{</STRONG> I am a <BR>multiline=20
+comment.<STRONG>}</STRONG> <BR><STRONG>#</STRONG> I am a single line =
+comment.=20
+</DIV><BR><A=20
+href=3D"http://john.lutheran.com/projects/gpc/pseudocode.html#listing">Ba=
+ck to=20
+Keyword Listing </A><!-- Maths Section -->
+<H4 id=3Dmaths>Maths operators: </H4>
+<P>The following are known math operators: modulus (%), addition (+),=20
+subtraction (-), multiplication (*), division (/), less than (&lt;), =
+equal (=3D),=20
+greater than (&gt;), less than or equal to (&lt;=3D), greater than or =
+equal to=20
+(&gt;=3D), and the exponent (^). </P><A=20
+href=3D"http://john.lutheran.com/projects/gpc/pseudocode.html#listing">Ba=
+ck to=20
+Keyword Listing </A><!-- Assignment Section -->
+<H4>Assignment operator: </H4><EM>variable </EM>:=3D<EM> expression</EM> =
+<BR>The=20
+assignment operator looks like the following <STRONG>:=3D</STRONG>. Note =
+that it=20
+is not the same as =3D, which is a test for equivalence. For an example: =
+<BR>
+<DIV class=3Dexample>n <STRONG>:=3D</STRONG> 5; </DIV><BR><A=20
+href=3D"http://john.lutheran.com/projects/gpc/pseudocode.html#listing">Ba=
+ck to=20
+Keyword Listing </A><!-- Literals Section -->
+<H4 id=3Dliterals>Literals </H4>There are two type of literals: a string =
+literal=20
+and a character literal. A character literal is used by placing single =
+quotes=20
+around the character. A string literal is used by placing double quotes =
+around=20
+the text. For an example: <BR>
+<DIV class=3Dexample><STRONG>character</STRONG> c :=3D 'a'=20
+<BR><STRONG>string</STRONG> s :=3D "This is a string." </DIV><BR><A=20
+href=3D"http://john.lutheran.com/projects/gpc/pseudocode.html#listing">Ba=
+ck to=20
+Keyword Listing </A><!-- Statement Blocks Section -->
+<H4 id=3Dstatments>Statement Blocks: </H4>Statements are all blocked off =
+with the=20
+keywords <STRONG>begin</STRONG> and <STRONG>end</STRONG>. Each statement =
+in the=20
+block is executed sequentially. Statements inside these blocks should =
+carry the=20
+same indentation to ease reading. For an example: <BR>
+<DIV class=3Dexample><STRONG>begin</STRONG> <BR>
+<DIV class=3Dtab>statement1; <BR>statement2; <BR>statement3; <BR>...=20
+<BR>statmentN; <BR></DIV><STRONG>end</STRONG> </DIV><BR><A=20
+href=3D"http://john.lutheran.com/projects/gpc/pseudocode.html#listing">Ba=
+ck to=20
+Keyword Listing </A><!-- Grouping Section -->
+<H4 id=3Dgrouping>Grouping: </H4>You can group expressions using =
+parentheses ().=20
+As in maths, parentheses have the highest order of precedence. Another =
+form of=20
+group can be achieved using the comma (,). This will extend a statement =
+by one.=20
+For an example: <BR>
+<DIV class=3Dexample>b :=3D (a / 2) + 6, a :=3D 1 </DIV><BR><A=20
+href=3D"http://john.lutheran.com/projects/gpc/pseudocode.html#listing">Ba=
+ck to=20
+Keyword Listing </A><!-- Variables Section -->
+<H4 id=3Dvariables>Variables: </H4>Variables must always be declared =
+before they=20
+are used. Variables are only known within their block statement scope. =
+To create=20
+a variable use the keyword <STRONG>declare</STRONG> before the variable =
+type.=20
+After the variable type follow with the variables name. A variable can =
+be made=20
+constant by using the keyword <STRONG>constant</STRONG>. Constants must =
+be=20
+assigned a value at the time of their declaration. A global variable can =
+be made=20
+to exist only within the scope of the file by using the keyword=20
+<STRONG>restricted</STRONG>. This has the same usage and meaning as =
+found in=20
+C++. You can create a user defined type by using the keyword=20
+<STRONG>enumeration</STRONG> followed by the type name. After the type =
+name give=20
+an integer list of values. All enumerations start at zero and follow=20
+sequentially, unless otherwise specified using an assignment operator. =
+For an=20
+example: <BR>
+<DIV class=3Dexample><STRONG>declare integer</STRONG> i; =
+<BR><STRONG>declare=20
+constant integer</STRONG> j <STRONG>:=3D</STRONG> 12; =
+<BR><STRONG>declare=20
+restricted</STRONG> <STRONG>integer</STRONG> j; =
+<BR><STRONG>enumeration</STRONG>=20
+Days <STRONG>begin</STRONG> Monday, Tuesday, Wednesday, Thursday, =
+Friday,=20
+Saturday, Sunday <STRONG>end;</STRONG> </DIV><BR><A=20
+href=3D"http://john.lutheran.com/projects/gpc/pseudocode.html#listing">Ba=
+ck to=20
+Keyword Listing </A><!-- Input/Output Section -->
+<H4 id=3Dio>Input/Output </H4>Input from a user is easily done using the =
+keyword=20
+<STRONG>read</STRONG> then followed by the variable you want the input =
+to be=20
+filled with. This keyword indicates that you will read the input for the =
+user=20
+from the standard input. Output for a user to read from the standard =
+output is=20
+indicated by the keyword <STRONG>print</STRONG> followed by what you =
+want to=20
+have displayed to the user. If there is an error that you would like to =
+have=20
+printed to the standard error use the keyword =
+<STRONG>printError</STRONG>. All=20
+output keywords assume a newline at the end of each statement. For an =
+example:=20
+<BR>
+<DIV class=3Dexample><STRONG>string</STRONG> message; =
+<BR><STRONG>read</STRONG>=20
+message; <BR><STRONG>print</STRONG> "You wrote " + message;=20
+<BR><STRONG>printError</STRONG> "Something horrible has happened."; =
+</DIV><BR><A=20
+href=3D"http://john.lutheran.com/projects/gpc/pseudocode.html#listing">Ba=
+ck to=20
+Keyword Listing </A><!-- Conditional Section -->
+<H4 id=3Dconditionals>Conditional Construction: </H4>The basic =
+if-construct=20
+support is: <STRONG>if</STRONG> condition <STRONG>then</STRONG> =
+statement=20
+<STRONG>else</STRONG> statement. You can extend the if statement by =
+using the=20
+<STRONG>elif</STRONG> keyword, which acts as an else-if construct =
+statement. For=20
+example: <BR>
+<DIV class=3Dexample><STRONG>if</STRONG> a =3D 1 <STRONG>then</STRONG> =
+<BR>
+<DIV class=3Dtab><STRONG>print</STRONG> "a is 1."; =
+</DIV><STRONG>elif</STRONG> a =3D=20
+2 <STRONG>then</STRONG> <BR>
+<DIV class=3Dtab><STRONG>print</STRONG> "a is 1."; =
+</DIV><STRONG>else</STRONG>=20
+<BR>
+<DIV class=3Dtab><STRONG>print</STRONG> "a is not 1 or 2."; =
+</DIV></DIV><BR>If you=20
+need to test just one variable for several conditions, then a case =
+statement=20
+would be more appropriate. There are three keywords involved in a case=20
+statement: <STRONG>case</STRONG>, <STRONG>select</STRONG>, and=20
+<STRONG>default</STRONG>. The keyword <STRONG>case</STRONG> is followed =
+by the=20
+variable you want to test. Blocking that off you precede each test using =
+the=20
+keyword <STRONG>select</STRONG>. To handle a default case selection use =
+the=20
+keyword <STRONG>default</STRONG>. Note that unlike some languages, we do =
+not=20
+have a fall through property. A specific series of select statements are =
+
+executed until the next select statement is declared. For an example, =
+<BR>
+<DIV class=3Dexample><STRONG>case</STRONG> a <BR><STRONG>begin</STRONG>=20
+<BR><STRONG>select</STRONG> 1 <BR>
+<DIV class=3Dtab><STRONG>print</STRONG> "a is 1."; =
+</DIV><STRONG>select</STRONG> 2=20
+<BR>
+<DIV class=3Dtab><STRONG>print</STRONG> "a is 2."; =
+</DIV><STRONG>default</STRONG>=20
+<BR>
+<DIV class=3Dtab><STRONG>print</STRONG> "a is not 1 or 2";=20
+</DIV><STRONG>end</STRONG> </DIV><BR><A=20
+href=3D"http://john.lutheran.com/projects/gpc/pseudocode.html#listing">Ba=
+ck to=20
+Keyword Listing </A><!-- Loop Section -->
+<H4 id=3Dloops>Loop Constructions: </H4><EM><STRONG>for</STRONG> =
+looping_variable=20
+:=3D initial value <STRONG>to</STRONG> final value</EM> <BR>
+<DIV class=3Dtab>statement; </DIV>The purpose of a loop is to execute =
+the same=20
+sequence of statements given certain conditions. If you want to =
+completely exit=20
+prematurely from any loop construct use the keyword =
+<STRONG>break</STRONG>.=20
+Break will exit out of the first loop construct that it encounters. If =
+you want=20
+to go on to the next iteration in the loop construct use the keyword=20
+<STRONG>continue</STRONG>. Continue will stop the loop execution and =
+restart the=20
+loop construct at the next iteration. The for loop is fairly straight =
+forward as=20
+its use is based on numerical iterations. There is a looping variable =
+with an=20
+inclusive starting point and an ending point that is exclusive. The for =
+loop=20
+will execute a single statement, which follows the final value on a new =
+line.=20
+The for loop can of course be made to execute more statements by using =
+block=20
+statements. The looping variable follows the keyword =
+<STRONG>for</STRONG>. After=20
+the looping variable is the assignment operator giving its initial =
+value. The=20
+final value follows the keyword <STRONG>to</STRONG> which follows the =
+initial=20
+value. During execution, the for loop will test to be sure the looping =
+variable=20
+is within the specified range, and if so will execute the statement. =
+After=20
+executing the statement, the for loop will increment the looping =
+variable and=20
+re-test to see if the looping variable is still within range. For an =
+example:=20
+<BR>
+<DIV class=3Dexample><STRONG>for integer</STRONG> j =
+<STRONG>:=3D</STRONG> 1=20
+<STRONG>to</STRONG> 12 <BR>
+<DIV class=3Dtab>i <STRONG>:=3D</STRONG> i * j;=20
+</DIV></DIV><BR><EM><STRONG>while</STRONG> condition</EM>=20
+<DIV class=3Dtab>statement; </DIV>The keyword <STRONG>while</STRONG> =
+precedes any=20
+conditional expression. The statement that the while loop should execute =
+follows=20
+on a new line. The while loop can be made to execute more lines of code =
+by using=20
+block statements. The while loop only executes only if the condition =
+supplied=20
+evaluates to true. After executing the statement, it retests the =
+condition. For=20
+an example: <BR>
+<DIV class=3Dexample><STRONG>declare integer</STRONG> k :=3D 12;=20
+<BR><STRONG>while</STRONG> k &lt; 24 <BR>
+<DIV class=3Dtab>k <STRONG>:=3D</STRONG> k + 1; </DIV></DIV><BR><A=20
+href=3D"http://john.lutheran.com/projects/gpc/pseudocode.html#listing">Ba=
+ck to=20
+Keyword Listing </A><!-- Arrays Section -->
+<H4 id=3Darrays>Arrays: </H4>To declare that a variable is an array =
+structure use=20
+the keyword <STRONG>array</STRONG> after the type of the variable. After =
+the=20
+declaration you can access any element in the array structure using =
+square=20
+brackets to index an array. As any good hacker will tell you, arrays =
+always=20
+start with 0, and so will ours. You can specify how many elements the =
+array=20
+should initially have by using wrapping the number desired in =
+parentheses=20
+following the variable name. As far as type safety and method calls you =
+can=20
+treat the array storage in the pseudocode similar to the arrays in =
+Java=99 or like=20
+a C-style array depending on the target language. For an example: <BR>
+<DIV class=3Dexample><STRONG>integer array</STRONG> myArray(6); =
+<BR><STRONG>for=20
+integer</STRONG> i <STRONG>:=3D</STRONG> 0 <STRONG>to</STRONG> =
+myArray.size() <BR>
+<DIV class=3Dtab>myArray[i] :=3D 0; </DIV></DIV><BR><A=20
+href=3D"http://john.lutheran.com/projects/gpc/pseudocode.html#listing">Ba=
+ck to=20
+Keyword Listing </A><!-- Functions Section -->
+<H4 id=3Dfunctions>Functions: </H4><EM>virtual abstract =
+<STRONG>procedure</STRONG>=20
+return_type proc_Name(variable1_type variable1: this is the first =
+variable,=20
+...)</EM> <BR><STRONG>begin</STRONG> <BR>
+<DIV class=3Dtab>statement1; <BR>statement2; <BR>statement3; <BR>...=20
+<BR>statmentN; <BR></DIV><STRONG>end</STRONG> <BR>A function is a =
+statement that=20
+can be called to execute a specific sequence of statements. To call a =
+function=20
+write the function's name followed by parentheses, passing any necessary =
+
+arguments inside the parentheses. If the function being called takes =
+more than=20
+one argument separate each argument by a comma. <BR>Some function you =
+write may=20
+need a return type. Return types are declared by listing the return type =
+
+following the keyword <STRONG>procedure</STRONG>. If your function does =
+not have=20
+a return value, then use the keyword <STRONG>noReturn</STRONG>. To =
+return a=20
+specific value or expression use the keyword <STRONG>give</STRONG> =
+inside the=20
+function, placing give before the value or expression you wish to =
+return. The=20
+statements for the function will follow on a new line.<BR>The statements =
+of a=20
+function must be enclosed by block statements. An argument list can be =
+provided=20
+after the function's name inside of the parentheses. The description =
+will follow=20
+after the variable name preceded by a colon. This should aid in the=20
+documentation later on. The arguments type will preceded the arguments =
+name.=20
+Each variable in the procedure list is separated by a comma. <BR>A =
+function has=20
+scope. It can be either global or only within a class. A global function =
+is=20
+created by not having the function inside a block statement. When a =
+procedure is=20
+inside of a class it may have additional properties listed before the=20
+<STRONG>procedure</STRONG> keyword. These keywords are =
+<STRONG>virtual</STRONG>,=20
+<STRONG>thread</STRONG> and <STRONG>abstract</STRONG>. I am sure you are =
+
+familiar with virtual and abstract and will not waste time explaining =
+them. The=20
+<STRONG>thread</STRONG> keyword is used to indicate that this function =
+is to be=20
+threaded in the implemented language. The actually starting of a =
+threaded=20
+function is done with the keyword <STRONG>launch</STRONG>. <BR>There are =
+three=20
+kinds of special function <STRONG>constructor</STRONG>,=20
+<STRONG>destructor</STRONG>, and <STRONG>startHere</STRONG>. The keyword =
+
+<STRONG>procedure</STRONG> is not needed in these specific cases. =
+Constructors=20
+and destructors both hold the same meaning as they would in C++. The =
+startHere=20
+special procedure is where execution would begin in a programme. An =
+example for=20
+a general function is: <BR>
+<DIV class=3Dexample><STRONG>procedure real</STRONG>=20
+randomMultiply(<STRONG>real</STRONG> x: is the multiplicand)=20
+<BR><STRONG>begin</STRONG> <BR>
+<DIV class=3Dtab>n :=3D randomNumber(); <BR>give n * x; =
+</DIV><STRONG>end</STRONG>=20
+</DIV><BR><A=20
+href=3D"http://john.lutheran.com/projects/gpc/pseudocode.html#listing">Ba=
+ck to=20
+Keyword Listing </A><!--Classes Section-->
+<H4 id=3Dclasses>Classes and Aggregate Data Types: </H4>All classes can =
+be created=20
+using the keyword <STRONG>class</STRONG>. A class can be made up of =
+other known=20
+classes using the keyword <STRONG>inherits</STRONG> after the name of =
+the=20
+subclass. Procedures listed in the class can be given three kinds of =
+scope=20
+<STRONG>public</STRONG>, <STRONG>protected</STRONG>, and=20
+<STRONG>private</STRONG>. These scopes carry the same meaning as in C++. =
+If no=20
+scope is listed anywhere in the class everything is assumed to be=20
+<EM>public</EM>, else the last declared scope is used. Scopes do not =
+need=20
+blocks, but they do need to be on their own line. The keyword=20
+<STRONG>attribute</STRONG> is used to declare class member variables. =
+When=20
+declaring a class member variable the keyword declare is not necessary =
+as it is=20
+implied with attribute. As always you can use blocks to extend the =
+statements.=20
+If a constructor and/or a destructor is not explicitly declared they =
+will be=20
+created. How to signify a constructor and a destructor are given in the=20
+procedures section. If a file is going to be needed when the pseudocode =
+is=20
+converted and compiled into the specified language, then the keyword=20
+<STRONG>addin</STRONG> is used before the name of the file to indicate =
+the=20
+inclusion of that file into the code. When you need to call the method =
+of a base=20
+class use the keyword <STRONG>base</STRONG> before the method's name. =
+The only=20
+exception is when you are calling the base class's constructor, in that =
+case you=20
+only need to use the keyword <STRONG>base</STRONG>. If you need to =
+specify the=20
+scope of something you may use the keyword <STRONG>in</STRONG>, =
+proceeded by the=20
+name of the variable you're intrested in and followed by the location of =
+that=20
+variable. A class must be enclosed with a unique name using the keywords =
+
+<STRONG>scope</STRONG> and <STRONG>scopeEnd</STRONG>. The keyword=20
+<STRONG>scope</STRONG> is similar to the #include and the #ifndef in C++ =
+
+combined. The keyword <STRONG>scopeEnd</STRONG> is similar to #endif in =
+C++. An=20
+example is given below: <BR>
+<DIV class=3Dexample><STRONG>scope</STRONG> FOO_H_ =
+<BR><STRONG>addin</STRONG>=20
+bar.h <BR><BR><STRONG>class</STRONG> Foo <STRONG>inherits</STRONG> Bar=20
+<BR><STRONG>begin</STRONG> <BR><STRONG>public</STRONG> <BR>
+<DIV class=3Dtab><STRONG>restricted integer</STRONG> m =
+<STRONG>:=3D</STRONG> 6;=20
+<BR><BR><STRONG>constructor</STRONG>() <BR><STRONG>begin</STRONG> <BR>
+<DIV class=3Dtab>n <STRONG>:=3D</STRONG> 5; <BR><STRONG>base=20
+constructor</STRONG>("15"); <BR></DIV><STRONG>end</STRONG>=20
+<BR><BR><STRONG>procedure noReturn</STRONG> display() =
+<BR><STRONG>begin</STRONG>=20
+<BR>
+<DIV class=3Dtab>print n; </DIV><STRONG>end</STRONG>=20
+<BR><BR></DIV><STRONG>private</STRONG> <BR>
+<DIV class=3Dtab><STRONG>attribute</STRONG> integer n; =
+</DIV><STRONG>end</STRONG>;=20
+<BR><STRONG>scopeEnd</STRONG> </DIV><BR>An aggregate data type is very =
+similar=20
+to a class with the only difference being that a class can have =
+different kinds=20
+of scope and a class has inheritance. The keyword for creating an =
+aggregate data=20
+type is <STRONG>structure</STRONG> and then the data type name. Just =
+like a=20
+class the type name of a structure should be capitalised. For an =
+example: <BR>
+<DIV class=3Dexample><STRONG>structure</STRONG> Card =
+<BR><STRONG>begin</STRONG>=20
+<BR>
+<DIV class=3Dtab><STRONG>string</STRONG> face; =
+<BR><STRONG>string</STRONG> suit;=20
+</DIV><STRONG>end</STRONG>; <BR></DIV><BR><A=20
+href=3D"http://john.lutheran.com/projects/gpc/pseudocode.html#listing">Ba=
+ck to=20
+Keyword Listing </A>
+<H4 id=3Derror>Error Handling </H4>Error handling is not something that =
+is exactly=20
+specified as it takes on the form of the implemented language. The three =
+
+keywords are: <STRONG>attempt</STRONG>, <STRONG>error</STRONG>,=20
+<STRONG>handle</STRONG>. The keyword <STRONG>attempt</STRONG> is used =
+like in=20
+C++'s <STRONG>try</STRONG> keyword and also when the pseudocode is being =
+written=20
+for a programme that will be done in BASIC or some similar language it =
+carries=20
+the meaning of the following phrase <STRONG>ON ERROR GOTO</STRONG>. The =
+keyword=20
+<STRONG>error</STRONG> has a dual meaning. If the programme is to be in =
+C++ then=20
+<STRONG>error</STRONG> is like the keyword <STRONG>throw</STRONG>. If =
+the=20
+programme is to be in BASIC then <STRONG>error</STRONG> is like the =
+keyword=20
+<STRONG>ERR</STRONG>. The keyword <STRONG>handle</STRONG> carries the =
+same=20
+meaning in C++ as the keyword <STRONG>catch</STRONG> and the same =
+meaning in=20
+BASIC as the keyword <STRONG>RESUME</STRONG>. Here are some examples: =
+<BR>If a=20
+programme was to be implemented in C++: <BR>
+<DIV class=3Dexample><STRONG>attempt</STRONG> <BR><STRONG>begin</STRONG> =
+<BR>
+<DIV class=3Dtab><STRONG>declare integer</STRONG> i :=3D 0; =
+<BR><STRONG>declare=20
+integer</STRONG> j :=3D 2; <BR><STRONG>declare integer</STRONG> result;=20
+<BR><BR><STRONG>if</STRONG> i =3D 0 <STRONG>then</STRONG> <BR>
+<DIV class=3Dtab><STRONG>error</STRONG> "Divide by zero.";=20
+<BR></DIV><STRONG>else</STRONG> <BR>
+<DIV class=3Dtab>result :=3D j / i; </DIV></DIV><STRONG>end</STRONG>=20
+<BR><BR><STRONG>handle string</STRONG> message<BR><STRONG>begin</STRONG> =
+<BR>
+<DIV class=3Dtab><STRONG>printError</STRONG> message; =
+</DIV><STRONG>end</STRONG>=20
+</DIV><BR>If a programme was to be implemented in BASIC here is an =
+example: <BR>
+<DIV class=3Dexample><STRONG>attempt</STRONG> Handler; =
+<BR><STRONG>declare=20
+integer</STRONG> x :=3D 5/0; <BR><BR>... bunch of BASIC statements ...=20
+<BR><BR>Handler: <BR><STRONG>if error</STRONG> =3D 23 =
+<STRONG>then</STRONG>=20
+<BR><STRONG>begin</STRONG> <BR>
+<DIV class=3Dtab><STRONG>print</STRONG> "Can't divide by 0"; <BR>x=20
+<STRONG>:=3D</STRONG> 0; <BR><STRONG>handle</STRONG> NEXT;=20
+</DIV><STRONG>end</STRONG> <BR></DIV><BR><A=20
+href=3D"http://john.lutheran.com/projects/gpc/pseudocode.html#listing">Ba=
+ck to=20
+Keyword Listing </A><!-- Example and Highlighting File -->
+<HR>
+
+<H2 id=3Dfiles align=3Dcenter>Pseudocode Files: </H2>
+<P>To use the files just simply download them to your computer and/or =
+open them=20
+up in your favourite text editor. </P>
+<H3><A href=3D"http://john.lutheran.com/projects/gpc/files/example.pc"=20
+type=3Dtext/x-pseudocode>Example File </A></H3>
+<H3><A =
+href=3D"http://john.lutheran.com/projects/gpc/files/pseudocode.xml"=20
+type=3Dtext/xml>Kate/Kwrite syntax highlighting file </A></H3><A=20
+href=3D"http://john.lutheran.com/projects/gpc/pseudocode.html#top">Back =
+to the top=20
+of the page </A><!-- Copyright info -->
+<HR>
+
+<DIV align=3Dcenter><A =
+href=3D"http://validator.w3.org/check?uri=3Dreferer"><IMG=20
+height=3D31 alt=3D"Valid HTML 4.0!" =
+src=3D"http://www.w3.org/Icons/valid-html40"=20
+width=3D88 align=3Dleft border=3D0> </A><A=20
+href=3D"http://jigsaw.w3.org/css-validator/check/referer"><IMG=20
+style=3D"BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; =
+BORDER-BOTTOM-WIDTH: 0px; WIDTH: 88px; HEIGHT: 31px; BORDER-RIGHT-WIDTH: =
+0px"=20
+alt=3D"Valid CSS!" =
+src=3D"http://jigsaw.w3.org/css-validator/images/vcss"=20
+align=3Dright> </A>
+<P>=A9 2005, 2006 by John Schneiderman, <A=20
+href=3D"http://www.gnu.org/licenses/fdl.html" type=3Dtext/html>FDL =
+Licence=20
+Information </A><BR><A =
+href=3D"http://john.lutheran.com/projects/gpc/gpc.html"=20
+target=3D_self>Back to gpc homepage </A><BR>Last Updated on 15 Mar 06=20
+</P></DIV></BODY></HTML>
+
+------=_NextPart_000_0000_01C688A3.9DB1A670
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Location: http://www.w3.org/Icons/valid-html40
+
+iVBORw0KGgoAAAANSUhEUgAAAFgAAAAfCAMAAABUFvrSAAAAYFBMVEX6//8zMzM5OTlKSkpmZmaE
+hISZmZnMzMyZAABmMwCljGZ7c2Z7ZjPnvWP/zGbMmTO9nEoYGAj///8xjLUQWnu11udjpcZanL0Y
+e61KlL0AZpmEtdbn7/e9vcaZM2YAAADkLmWzAAAAAXRSTlMAQObYZgAAABd0RVh0U29mdHdhcmUA
+Z2lmMnBuZyAxLjAuMCw8AXdVAAACSklEQVR4nN3WYZeqIBAG4DUxd0NcxGsioPz/f7nvDFpWtqe6
+nfvhzgfi2DmP4zCgH+X744OjNA9E/UR8f/3/sNYYFEadQtU88DWNQb0Kx0h6zDDhqGoe6noXcbHi
+6d/BWlexoWRjExskjJ87sLOdMZ1rA+bBOo7emDHLy1CsYE1kNvN0JauiBqnvwYPzgK0Db7xz1gL3
+ZmxizGWzgjkuYB13dZPdhb0bMPbEm6M7htC71oQ8iqKJ+a8Z101Ewnfh4GwgEo8fWuQdKPkxCmPK
+3Xhb4zWsUeA6wVlVVfoKbpEsBvBc6YFusc/4r43FW8OKGiPBqVMAT9OpK7w7Uo2Rp4fZ0cQU+VVX
+PLpBpollhpEnSIvy0joOzg2d2RevwdP0+Ukyw8Ha7ui8bTtrQ/CtRUHG/QZ8UKepVlssuyynDXJ0
+g22Rbs/9QWXxYbyFldTLHYQQh9/cGUb3osw0+uVGNzsPIcUMKyG1FLc5n90ZDrxyWDXag3wjuwEj
+TbXMcBatUp6ma3eBByLRcW0IgeE/c4n3Z1jh8fWSOgYhzy7La3c5hKjN0rbrKWlUu2ByH8+wFIdt
+ODXCpbvAHRe3Qz2wnX2PwpS7IpRytaUP4qCWUiS4uCzs/HN5bIa2m0fUI63h2DRZzMMJFkKiFsVG
+jWcyuVfncej4zGTdtwMvYSnyYrWlJUJIyagSxborkszua+88TTUuKNOrPp5lWsLXXqa8duo8vZS5
+Nd79loacmvntr/9p3iTv/65I7r/4YHngM+/7mVjg7IH4eirY/QGjxKEiOmkjngAAAABJRU5ErkJg
+gg==
+
+------=_NextPart_000_0000_01C688A3.9DB1A670
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Location: http://jigsaw.w3.org/css-validator/images/vcss
+
+R0lGODlhWAAfAMYAAP///3OUxwxHnTZkrlR8ut/m8u7u7kxMTK6urp2dnb6+vrHD4KG32ZKr0yws
+LAAAAH19fRwcHO7y+CFVpsHP5o2NjQwMDBdNomSIwQtEnY6n0s7Ozl1dXdDb7CZZqIOfzUVwtDw8
+PGx6kW1tbczMzP/MZmOlxgBmmRh7rUqUvefv90pKSr29xpmZmbXW54S11jMzM4SEhCMcDg8MBlqc
+vWZmZu+/X4ltNjwwGG1XK9+yWa+MRkw8HsCZTM+lUltIJCwjEQwJBJx8PjGMtTk5ORwWC8OcTuu8
+XpkAAGYzAPTDYZUAAMyZM7mUSuG0Wt6xWHtzZiggEABmmQBmmQBmmQBmmQBmmQBmmQBmmQBmmQBm
+mQBmmQBmmQBmmQBmmQBmmQBmmQBmmQBmmQBmmQBmmQBmmQBmmQBmmQBmmQBmmQBmmQBmmQBmmQBm
+mQBmmQBmmQBmmQBmmQBmmQBmmQBmmQBmmQBmmQBmmQBmmQBmmQBmmQBmmQBmmQBmmQBmmQBmmSH+
+ClZhbGlkIENTUyEAIfkEAQAAfwAsAAAAAFgAHwAAB/6AJIKDhIWGh4iJiouMhX+PjyQAk5SVlpeY
+mSWbnJ2en6ChoEdGK5CRmamqqaKtrq8lpKankqu2trC5urGlp3+1t8GYu8Stsr7AwsqTxc2fx7TL
+0gDO1ZvQkLUBAgOUBAIElQUC5OXkkwYHBwgACQqU1tXYqAAL5AWTDOeUDebl3QYcPBgIIQIEePGa
+zftFiRyDSRLILfAmYAIFCtsEUABQ4YGFAxEGJkCYkNhCYN/CTbogAEPDDBoASGCp0oGFDZM4RKhU
+sthJSvouTOpAzsMkewIkAPhwb9KDCpQMvCNp4waOqzl0cNrB4yqPHpx8/PC6Q9cxJNkojRMwkSm5
+Dv4AMHADsPYDpQcGWJWwAWRg3wdBtPYYGATHQLA6ggA2/EBILlJJkEimN2mAgAAALLNsAMCDAM7f
+BHjYCMCBqk03APvYa/hHidRBylp1nPrBjRI7cDiGdeSG5N8MKTH1EPEyN6IC4IIwtzHE6RI8HuQA
+tWMg4R82SviwPpDHali+f/9OhpzpgLqiK1FgCYLj8x/SOfW44djHjRw4inQvoePG2L9AwCKEeMAl
+AwBLLNllGTkuVSJXUjjpJQRg9fU1nWHTQfcADq89wMMmOQD2yoAEohUcJQ8mB0BGbFmij0arcAIf
+d0BkVx13D5Tlg2LcZfjabp2QSGBalSAlFADICf5wyYsiXCIVSbjh9wOQ2lmFww1gbdJfVzmUtQmJ
+QijBiZDiRVNJcQ0eCM6KHuATFzkJjFQJByNA2ROZSIiJJxJLIHPJNxNNItdDyw1AgVvtRQAVAOk8
+cBAzPW3CRIlI7InELERW0o9S+QiATwEsmQMXAg9EEMJAptlZkqUlNoEpZWqpBFE3R4XmQaAAIBDS
+AxzkpeqqlIrnRC9mWuKmWpZIAFcwkXoyabBK/DSNMs06S6mY0k7LbLWdPPubmLy8eqK2uHDbyRPf
+cpItuTGae+4N4F5DbKbsPueuKD+xoO++/Pbr77//GiHwwAQXbPDBCB8cAxTikrDCwxBHLPHEFA1X
+bPHFGGf8MBFR+BIIACH5BAEKAH8ALAEAAQAkABwAAAf+gACCg4SFhoeIiYqLjI2Oj5CRkpOUiAEC
+A4MEAgSEBQKgoaCCBgcHCAAJCoULoAWCDKODDaKhmQYOD7oQERCGoAyCEqALmgITFBSXAhQAFQ8W
+BxG6CYabnYIXAhiDAhkaABLa2A4WG4IcEYexF4IdoB6CrQISAB+ugg8Vgwarhp8Cit0D1QEABkwA
+AH4Y9MBAowECAgCAqK0BAA8CLG4S4KEZAAeO7nkYFhHTOwEFQYhqFsLRyXsDFHIkREEbCGePtGlb
+CBEUN0IH6Z1zFBQlgGUBC8ViBmleOwAnBRhaKsJQP0QkfwIYd9TDK4OgElQjxGFEok3FBB0MpnIA
+hYE8NyPsA1DqgS9EtOrBEvCqgDZRBRE8iBBCF8hEBbAJyyRvo4e0ABBMe8DBoaKvgzALK1ips+fP
+oEOLDh0IADs=
+
+------=_NextPart_000_0000_01C688A3.9DB1A670
+Content-Type: text/css;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.nongnu.org/kardsgt/pseudocode.css
+
+BODY {
+	FONT-SIZE: 12pt; BACKGROUND: #fde2ff; MARGIN-LEFT: 10pt; COLOR: black; =
+LINE-HEIGHT: 16pt; MARGIN-RIGHT: 10pt
+}
+A:link {
+	BACKGROUND: #fde2ff; COLOR: #f704ff
+}
+A:visited {
+	BACKGROUND: #fde2ff; COLOR: #9d00ff
+}
+DIV.example {
+	BACKGROUND: #fde2ff; COLOR: #0022ff
+}
+DIV.tab {
+	MARGIN-LEFT: 20pt
+}
+
+------=_NextPart_000_0000_01C688A3.9DB1A670--

@@ -1,0 +1,70 @@
+Non-graded Practice Assignment 4 for Annajiat’s CSE110 Thoery students
+
+
+Regular Submission Date:
+Wednesday, July 29, in class to ST. 
+On this day, You should submit whatever you have, no matter how many questions you were able to solve.
+
+
+ST will return assignments.
+
+
+Solution Guideline:
+===================
+Write java code. Use for-loops for java programs if loop is necessary.
+Use Scanner only if taking input is necessary.
+
+For each task, you may assume following lines are already written for you.
+So, you do not have to repeat these lines for each task.
+
+import static java.lang.System.*;
+import java.util.*;
+public class Task01 {
+     public static void main (String[] args) {
+           Scanner k = new Scanner (in);
+            
+           // your writing starts here
+
+           // your writing ends here, so don't include following two closing curly braces in your solution
+
+     }
+}
+
+Submission instructions:
+===================
+1. Submit on plain paper. Staple before coming into the class. You can staple from DCOs room.
+2. Write date of submission, name, ID, section, course, assignment number
+3. Do NOT use an extra coversheet / front page for writing name, id etc. Write in upper right corner.
+4. You can use pen or pencil or both.
+5. Everything must be hand written / drawn. Printouts will not be accepted.
+6. It is optional for you to include a trace table of your flowchart with your assignment paper.
+7. You are allowed to use && and ||.
+8. You are allowed to use array, String as appropriate. Try to solve problems numericallying without resorting to Strings.
+
+
+Assignment04 Question:
+===================
+write javacodes for all of the following problems.
+
+read How to Solve it by Computer.
+
+
+Total 18 tasks
+
+Book Page 104 (PDF 125): 3.3.1 to 3.3.9
+
+Task 3.4.0. Take a number from user and tell if it is a prime by counting factors
+
+Book Page 120 (PDF 141): 3.5.1, 3.5.3, 3.5.4
+
+Task 3.7.0 ask user for a and b. Calculate a to the power b using the method discussion in 3.7
+
+Book Page 143 (PDF 164): 4.1.1 to 4.1.4
+
+
+
+
+
+Those who did not understand the question or need further help, you can take help of the ST
+
+or you can ask in the group by clicking reply to this email (instead of composing a new mail)

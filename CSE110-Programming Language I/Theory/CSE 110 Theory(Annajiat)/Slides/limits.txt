@@ -1,0 +1,10 @@
+start: 1 OUT
+end: 1 in
+connector:
+2 to 3 in
+1 out
+decision:
+1 in
+2 out
+all other boxes:
+1 in, 1 out

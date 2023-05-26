@@ -1,0 +1,158 @@
+Assignment 4 for Annajiat’s CSE110 Thoery students
+
+Early Submission Date Ranges for 20% bonus:
+Starts: Monday, November 17
+Ends: Sunday, November 23
+Find and submit to Student Tutor (ST) at your own responsibility for early submissions.
+
+Regular Submission Date:
+Monday, November 24, in class to ST.
+
+Late Submission Date Ranges(50% mark will be deducted):
+Starts: Tuesday, November 25
+Ends: Thursday, November 27 to ST. 
+Find ST at your own responsibility for late submissions.
+
+
+ST might not be able to return assignments, hence preserve a photocopy for your future reference or to revise later.
+
+Solution Guideline:
+===================
+Write java code. Use for-loops for java programs if loop is necessary.
+
+For each task, you may assume following lines are already written for you.
+So, you do not have to repeat these lines for each task.
+
+import static java.lang.System.*;
+import java.util.*;
+public class Task01 {
+     public static void main (String[] args) {
+           Scanner k = new Scanner (in);
+            
+           // your writing starts here
+
+           // your writing ends here, so don't include following two closing curly braces in your solution
+
+     }
+}
+
+Submission instructions:
+===================
+1. Submit on plain paper. Staple before coming into the class. You can staple from DCOs room.
+2. Write date of submission, name, ID, section, course, assignment number
+3. Do NOT use an extra coversheet / front page for writing name, id etc. Write in upper right corner.
+4. You can use pen or pencil or both.
+5. Everything must be hand written / drawn. Printouts will not be accepted.
+6. It is optional for you to include a trace table of your flowchart with your assignment paper.
+7. You are allowed to use && and ||.
+
+
+Assignment04 Question:
+===================
+Both draw flowchart and write javacodes for all of the following problems.
+
+Readings for Tasks 1 to 6:
+Chapter 4 (4.1->4.6) and 5 (5.2->5.4) of How to Solve it by Computer.
+
+Task1) Assume that we have the following array.
+int[] a = new int[] {10, 30, 20, 50, 40};
+Find the largest number and print it along with its location.
+Output:
+Largest number is 50
+Largest number was found at location 3
+
+
+Task2) Assume that we have the following array.
+int[] a = new int[] {10, 30, 20, 50, 40};
+
+Modify Task2. Swap the first number with largest number.
+Your output should be 50, 30, 20, 10, 40
+
+Hint:
+Find largestNumber and largestNumberLocation.
+backup = a[0];
+a[0]=largestNumber;
+a[largestNumberLocation]=backup;
+
+
+Task3) Assume that we have the following array.
+int[] a = new int[] {50, 30, 20, 10, 40};
+Modify Task2.
+
+Find largest number among all numbers between 2nd and 
+last number (30, 20, 10, 40).
+Swap the 2nd number with this largest number. 
+Thus you just put 2nd largest in 2nd position.
+
+Task4) Combine ideas from Task 2 and 3. 
+Ask the user for a number n, and then find nth highest number 
+
+Hint: 
+Repeat the idea (from task 2,3) n times. 
+Then you will find nth highest number in nth position in array.
+Read  
+https://groups.google.com/d/topic/bucse110summer2014/Lz6eK2aCRR8/discussion
+
+Task 5) Modify Task 4 to sort / arrange all numbers in the array.
+Your output should be 50, 40, 30, 20, 10
+
+Hint: 
+Read  
+https://groups.google.com/d/topic/bucse110summer2014/Lz6eK2aCRR8/discussion
+
+
+Task 6) Find median among some numbers. 
+Ask user how many numbers and input those numbers.
+
+Definition of Median:
+For example, if a < b < c, then the median of the list {a, b, c} is b, 
+and, if a < b < c < d, then the median
+ of the list {a, b, c, d} is the mean of b and c; 
+i.e., it is (b + c)/2.
+
+Hint:
+Sort numbers
+if there are odd number of numbers, say 9, then 
+the median is the middle number, at 5th position
+
+if there are even number of numbers, say 10, then 
+the median is average of two middle numbers, (5th+6th)/2
+
+Sample Input 1:
+5
+10 50 40 20 30
+Sample Output 1:
+30
+Sample Input 2:
+6
+10 50 40 20 30 60
+Sample Output 2:
+35
+
+
+You are NOT allowed to use array for Task 7 to 11.
+
+Task7) Ask user for quantity and name. Then print name that many times.
+
+
+
+Task8) Take n numbers from user and tell how many were odd and even.
+
+
+Task9) Keep taking numbers from the user until the user gives -1, then print the average.
+
+
+Task10) Solve task 9 with only one READ/INPUT/nextInt() in whole program.
+
+Task11) Ask user the value of x and then calculate the value of sin(x). You are NOT allowed to use Math.sin() or any other Math functions/methods.
+Hint:
+Read Chapter 2 of How to Solve it by Computer
+Specially, 
+Algorithm 2.4: Factorial Computation
+Algorithm 2.5: Sine Function Computation
+
+
+
+Those who did not understand the question or need further help, you can take help of the ST
+
+or you can ask in the group by clicking reply to this email (instead of composing a new mail)

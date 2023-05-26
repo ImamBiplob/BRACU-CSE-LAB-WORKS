@@ -1,0 +1,18 @@
+Both flowchart and java code (both while-loop and for-loop version)
+1) Take n from user, print times table (namta) of n. If user gives 7, print
+7x1=7
+7x2=14
+...
+7x10=70
+2) Take from & to from user, solve q1 for all numbers in between. If user give 5,8 print
+5x1=5
+5x2=10
+....
+8x10=80
+3) Repeat q2 but ask user value of linesPerTable as well. If user give 8,9,3,print
+8x1=8
+8x2=16
+8x3=24
+9x1=9
+9x2=18
+9x3=27

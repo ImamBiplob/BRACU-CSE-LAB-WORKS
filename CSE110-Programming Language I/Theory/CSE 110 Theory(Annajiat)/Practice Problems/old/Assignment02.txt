@@ -1,0 +1,51 @@
+Assignment 2 for Annajiat’s CSE110 Thoery students
+
+Early Submission Date for 20% bonus:
+Starts: Wednesday March 11
+Ends: Saturday, March 14 to Student Tutor (ST). Find ST at your own
+responsibility for early submissions.
+
+
+Regular Submission Date:
+Saturday, March 21, in class to ST. This day is a makeup of Wednesday.
+On this day, You should submit whatever you have, no matter how many questions you were able to solve.
+
+
+Late Submission Date Ranges (50% mark will be deducted):
+Starts: Wednesday, March 25
+Ends: Saturday, March 28 to ST. 
+Find ST at your own responsibility for late submissions.
+
+ST will return assignments just like quizzes.
+
+
+Submission instructions:
+===================
+1. Submit on plain paper. Staple before coming into the class. You can staple from DCOs room.
+2. Write date of submission, name, ID, section, course, assignment number
+3. Do NOT use an extra coversheet / front page for writing name, id etc. Write in upper right corner.
+4. You can use pen or pencil or both.
+5. Everything must be hand written / drawn. Printouts will not be accepted.
+6. It is optional for you to include a trace table of your flowchart with your assignment paper.
+7. You are allowed to use && and ||.
+
+
+Assignment02 Question:
+===================
+Draw flowchart for all of the following problems
+
+Read Relevant chapters from How to Solve it by Computer
+
+Use the task numbers given in the excercises
+
+Total 13 questions.
+
+Book Page 59 (PDF 80): 2.4.1 to 2.4.6
+Book Page 63 (PDF 84): 2.5.1 to 2.5.3
+
+Task 2.6
+Using Fibonacci Algorithm and its Implementation discussed in book page 66-67 (PDF 87-88).
+print first 10 fibonacci numbers
+	
+Book Page 73 (PDF 94): 2.7.1 to 2.7.3
+

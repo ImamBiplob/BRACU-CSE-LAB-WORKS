@@ -1,0 +1,306 @@
+From: <Saved by Microsoft Internet Explorer 5>
+Subject: Pseudocode Examples
+Date: Mon, 5 Jun 2006 14:56:23 +0600
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.unf.edu/~broggio/cop3530/3530pseu.htm
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2800.1807
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Pseudocode Examples</TITLE>
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Diso-8859-1">
+<META content=3D"WP Internet Publisher 6.1" name=3DCreatedBy>
+<META content=3D"MSHTML 6.00.2800.1543" name=3DGENERATOR></HEAD>
+<BODY bgColor=3D#339966>
+<H1>
+<CENTER>Pseudocode Examples</H1>
+<H5>Modified 15 December 1999 </H5></CENTER>
+<P>
+<H3><B>An <U>algorithm</U> is a procedure for solving a problem in terms =
+of the=20
+actions to be executed and the order in which those actions are to be =
+executed.=20
+An algorithm is merely the sequence of steps taken to solve a problem. =
+The steps=20
+are normally "sequence," "selection, " "iteration," and a case-type =
+statement.=20
+<P>
+<P>In C, "sequence statements" are imperatives. The "selection" is the =
+"if then=20
+else" statement, and the iteration is satisfied by a number of =
+statements, such=20
+as the "while," " do," and the "for," while the case-type statement is =
+satisfied=20
+by the "switch" statement.
+<P>
+<HR>
+
+<P><U>Pseudocode</U> is an artificial and informal language that helps=20
+programmers develop algorithms. Pseudocode is a "text-based" detail=20
+(algorithmic) design tool.</B>
+<P>
+<P><B>The rules of Pseudocode are reasonably straightforward. All =
+statements=20
+showing "dependency" are to be indented. These include while, do, for, =
+if,=20
+switch. Examples below will illustrate this notion.
+<P>
+<P><B>GUIDE TO PSEUDOCODE LEVEL OF DETAIL: Given record/file =
+descriptions,=20
+pseudocode should be created in sufficient detail so as to directly =
+support the=20
+programming effort. It is the purpose of pseudocode to elaborate on the=20
+algorithmic detail and not just cite an abstraction.=20
+<P>
+<HR>
+</B>
+<P>Examples:
+<P>1. <PRE>If student's grade is greater than or equal to 60
+    Print "passed"
+else
+    Print "failed" =20
+endif
+</PRE>
+<HR>
+
+<P>2. <PRE> =20
+Set total to zero
+Set grade counter to one
+While grade counter is less than or equal to ten
+    Input the next grade
+    Add the grade into the total
+endwhile=20
+Set the class average to the total divided by ten
+Print the class average.
+</PRE>
+<HR>
+
+<P>3. <PRE>Initialize total to zero
+Initialize counter to zero
+Input the first grade
+while the user has not as yet entered the sentinel
+   add this grade into the running total=20
+   add one to the grade counter =20
+   input the next grade (possibly the sentinel)
+endwhile
+
+if the counter is not equal to zero
+   set the average to the total divided by the counter
+   print the average =20
+else
+   print 'no grades were entered'=20
+endif=20
+</PRE>
+<HR>
+
+<P>4. <PRE>initialize passes to zero
+initialize failures to zero
+initialize student to one
+while student counter is less than or equal to ten
+    input the next exam result =20
+    if the student passed<P>
+        add one to passes=20
+    else=20
+	add one to failures=20
+     	add one to student counter=20
+    endif=20
+endwhile=20
+print the number of passes
+print the number of failures
+if eight or more students passed
+    print "raise tuition"
+endif
+</P></PRE>
+<HR>
+5. <PRE>Larger example: =20
+
+NOTE:  NEVER ANY DATA DECLARATIONS IN PSEUDOCODE
+
+Print out appropriate heading and make it pretty
+While not EOF do:
+     Scan over blanks and white space until a char is found=20
+	(get first character on the line)
+     set can't-be-ascending-flag to 0
+     set consec cntr to 1
+     set ascending cntr to 1
+     putchar first char of string to screen
+     set read character to hold character
+     While next character read !=3D blanks and white space
+          putchar out on screen
+          if new char =3D hold char + 1
+               add 1 to consec cntr
+               set hold char =3D new char
+               continue
+          endif
+          if new char &gt;=3D hold char=20
+               if consec cntr &lt; 3=20
+                    set consec cntr to 1
+               endif
+               set hold char =3D new char
+               continue
+          endif
+          if new char &lt; hold char
+               if consec cntr &lt; 3
+                    set consec cntr to 1
+               endif
+               set hold char =3D new char
+               set can't be ascending flag to 1
+               continue
+           endif
+     end while
+     if consec cntr &gt;=3D 3=20
+          printf (Appropriate message 1 and skip a line)
+          add 1 to consec total
+     endif
+     if  can't be ascending flag =3D 0
+          printf (Appropriate message 2 and skip a line)
+          add 1 to ascending total
+     else
+          printf (Sorry message and skip a line)
+          add 1 to sorry total
+     endif
+end While
+Print out totals:  Number of consecs, ascendings, and sorries.
+Stop
+</PRE>
+<HR>
+
+<HR>
+<!-- =
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D  -->
+<CENTER><B>
+<H3>Some Keywords That Should be Used And Additional Points=20
+</H3></B><BR></CENTER>For looping and selection, The keywords that are =
+to be=20
+used include Do While...EndDo; Do Until...Enddo; While .... Endwhile is=20
+acceptable. Also, Loop .... endloop is also VERY good and is language=20
+independent. Case...EndCase; If...Endif; Call ... with (parameters); =
+Call;=20
+Return ....; Return; When;=20
+<H3>Always use scope terminators for loops and iteration. </H3>
+<P>As verbs, use the words Generate, Compute, Process, etc. Words such =
+as set,=20
+reset, increment, compute, calculate, add, sum, multiply, ... print, =
+display,=20
+input, output, edit, test , etc. with careful indentation tend to foster =
+
+desirable pseudocode. Also, using words such as Set and Initialize, when =
+
+assigning values to variables is also desirable.=20
+<P>
+<HR>
+
+<CENTER><B>
+<H3>More on Formatting and Conventions in Pseudocoding =
+</H3></B><BR></CENTER>
+<LI>INDENTATION in pseudocode should be identical to its implementation =
+in a=20
+programming language. Try to indent at least four spaces.
+<P></P>
+<LI>As noted above, the pseudocode entries are to be cryptic, AND SHOULD =
+NOT BE=20
+PROSE. NO SENTENCES.=20
+<P></P>
+<LI><B>No flower boxes (discussed ahead) in your pseudocode. </B>
+<P></P>
+<LI>
+<H3><B>Do not include data declarations in your pseudocode.</B></H3>
+<LI>But do cite variables that are initialized as part of their =
+declarations.=20
+E.g. "initialize count to zero" is a good entry.
+<P>
+<P>
+<HR>
+
+<CENTER><B>
+<H3>Function Calls, Function Documentation, and Pseudocode =
+</B></H3></CENTER>
+<LI>Calls to Functions should appear as:=20
+<UL>Call FunctionName (arguments: field1, field2, etc.) </UL>
+<LI>Returns in functions should appear as:=20
+<UL>Return (field1) </UL>
+<LI>Function headers should appear as:=20
+<UL>FunctionName (parameters: field1, field2, etc. ) </UL><BR>
+<LI>Note that in C, arguments and parameters such as "fieldn" could be =
+written:=20
+"pointer to fieldn ...."=20
+<P>
+<P></P>
+<LI>Functions called with addresses should be written as:=20
+<UL>Call FunctionName (arguments: pointer to fieldn, pointer to field1, =
+etc.)=20
+</UL>
+<LI>Function headers containing pointers should be indicated as:=20
+<UL>FunctionName (parameters: pointer to field1, pointer to field2, =
+...)</UL>
+<LI>Returns in functions where a pointer is returned:=20
+<UL>Return (pointer to fieldn) </UL>
+<LI>It would not hurt the appearance of your pseudocode to draw a line =
+or make=20
+your function header line "bold" in your pseudocode. Try to set off your =
+
+functions.
+<UL></UL>
+<P></P>
+<LI>Try to use scope terminators in your pseudocode and source code too. =
+It=20
+really hels the readability of the text.=20
+<UL></UL>
+<P>
+<HR>
+
+<CENTER><B>
+<H3>Source Code </B></H3></CENTER>
+<LI><B>EVERY function should have a flowerbox PRECEDING IT.</B> This =
+flower box=20
+is to include the functions name, the main purpose of the function, =
+parameters=20
+it is expecting (number and type), and the type of the data it returns. =
+All of=20
+these listed items are to be on separate lines with spaces in between =
+each=20
+explanatory item.
+<P></P>
+<LI>FORMAT of flowerbox should be=20
+<P><PRE>	 ********************************************************
+	 Function:   ( cryptic text describing single function
+		     ....... (indented like this) =09
+		     .......
+	 Calls:      Start listing functions "this" function calls
+		     Show these functions:  one per line, indented
+
+	 Called by:  List of functions that calls "this" function
+		     Show these functions:  one per line, indented.
+
+	 Input Parameters:  list, if appropriate; else None
+	=20
+	 Returns:    List, if appropriate.
+	 ****************************************************************
+</PRE>
+<LI>INDENTATION is critically important in Source Code. Follow standard =
+examples=20
+given in class. If in doubt, ASK. Always indent statements within IFs, =
+FOR=20
+loops, WILLE loops, SWITCH statements, etc. a consistent number of =
+spaces, such=20
+as four. Alternatively, use the tab key. One or two spaces is =
+insufficient.=20
+<P></P>
+<LI>Use scope terminators at the end of if statements, for statements, =
+while=20
+statements, and at the end of functions. It will make your program much =
+more=20
+readable.=20
+<P><B>SPELLING ERRORS ARE NOT ACCEPTABLE </B>
+<HR>
+
+<HR>
+
+<P>
+<P>
+<P></P></LI></B></H3></BODY></HTML>
