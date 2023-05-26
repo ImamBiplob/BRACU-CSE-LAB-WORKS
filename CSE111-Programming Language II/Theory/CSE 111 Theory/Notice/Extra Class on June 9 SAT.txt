@@ -1,5 +1,0 @@
-CSE111 section 5:
-Class 1: SAT, 9 Jun, 8:30 AM to 9:35 AM
-Class 2: SAT, 9 Jun, 9:35 AM to 10:40 AM
-Class 3: SAT, 9 Jun, 10:40 AM to 11:45 AM
-Class 4: FRI, 6 July, Midterm

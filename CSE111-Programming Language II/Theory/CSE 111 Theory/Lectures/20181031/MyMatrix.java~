@@ -1,7 +1,0 @@
-//design / blue print
-public class MyMatrix {
-    private int[] a;
-    MyMatrix() {
-        a = new int[1];
-    }
-}

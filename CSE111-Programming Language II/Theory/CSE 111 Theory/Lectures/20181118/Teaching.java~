@@ -1,4 +1,0 @@
-interface Teaching {
-    void teach();
-    void calcResult();
-}

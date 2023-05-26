@@ -1,3 +1,0 @@
-interface Teaching {
-    void teach();
-}

@@ -1,5 +1,0 @@
-class Student implements Studying {
-    void Study(){
-        System.out.println("Study method");
-    }
-}

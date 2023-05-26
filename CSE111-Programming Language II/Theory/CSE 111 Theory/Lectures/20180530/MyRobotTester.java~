@@ -1,6 +1,0 @@
-class MyRobotTester {
-    public static void main (String[] args) {
-        MyRobot mr;
-        
-    }
-}

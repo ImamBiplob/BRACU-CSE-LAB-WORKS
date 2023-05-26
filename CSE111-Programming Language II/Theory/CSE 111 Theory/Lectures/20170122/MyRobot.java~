@@ -1,7 +1,0 @@
-public class MyRobot {
-    int jogKoro(int prothom,int ditio){
-        int folafol;
-        folafol = prothom+ditio;
-        return folafol;
-    }
-}

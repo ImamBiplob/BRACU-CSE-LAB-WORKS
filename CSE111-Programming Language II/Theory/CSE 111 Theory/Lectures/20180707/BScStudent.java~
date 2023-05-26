@@ -1,5 +1,0 @@
-class BScStudent extends Student { //inheritance 
-    int id;
-    String degree = "B.Sc.";
-}
-

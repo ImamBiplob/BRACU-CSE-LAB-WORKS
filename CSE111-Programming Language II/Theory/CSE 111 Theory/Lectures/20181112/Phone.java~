@@ -1,7 +1,0 @@
-class Phone {
-    String os;
-    String description = "generic phone";
-    void tellAboutYourself() {
-        System.out.println(description);
-    }
-}

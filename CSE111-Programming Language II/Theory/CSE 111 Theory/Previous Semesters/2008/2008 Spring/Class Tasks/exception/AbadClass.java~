@@ -1,6 +1,0 @@
-public class AbadClass{
-  public void badThingsHappen(){
-    int [] a = new int [1];
-    a[1] = 3;
-  }
-}

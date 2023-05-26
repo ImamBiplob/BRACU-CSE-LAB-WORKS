@@ -1,5 +1,0 @@
-http://www.cse.lehigh.edu/~glennb/oose/ppt/Exceptions%20in%20Java.ppt
-
-http://www.oracle.com/technetwork/articles/java/java7exceptions-486908.html
-
-http://www.cs.cmu.edu/afs/cs/Web/People/pattis/15-1XX/15-200/lectures/exceptions/index.html

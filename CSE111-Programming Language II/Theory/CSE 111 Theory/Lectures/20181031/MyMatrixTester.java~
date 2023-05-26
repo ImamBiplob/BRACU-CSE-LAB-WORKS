@@ -1,6 +1,0 @@
-//tester/driver/user class
-public class MyMatrixTester {
-    public static void main (String[] args) {
-        MyMatrix m = new MyMatrix();
-    }
-}

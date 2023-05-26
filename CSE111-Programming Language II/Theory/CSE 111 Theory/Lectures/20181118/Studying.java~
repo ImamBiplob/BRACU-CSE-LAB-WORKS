@@ -1,3 +1,0 @@
-interface Studying {
-    void study();
-}

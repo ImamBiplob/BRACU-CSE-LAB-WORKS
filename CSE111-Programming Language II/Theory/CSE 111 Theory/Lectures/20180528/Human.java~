@@ -1,8 +1,0 @@
-class Human {
-    //field/properties/attributes
-    int age;
-    String name;
-
-    //action/behavior/method(function/subroutine)
-  
-}

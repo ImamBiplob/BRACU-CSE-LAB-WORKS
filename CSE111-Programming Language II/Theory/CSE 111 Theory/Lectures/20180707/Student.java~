@@ -1,4 +1,0 @@
-class Student {
-    String id;
-    double mark;
-}

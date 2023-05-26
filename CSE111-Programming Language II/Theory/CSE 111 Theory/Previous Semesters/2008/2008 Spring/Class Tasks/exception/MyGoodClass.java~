@@ -1,9 +1,0 @@
-public class MyGoodClass{
-
-  public void goodMethod(){
-    
-  }
-  public static void main(String [] mubin){
-    
-  }
-}
